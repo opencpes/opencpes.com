@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://opencpes.com/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="https://s2.wp.com/wp-content/themes/pub/twentyfifteen/js/html5.js"></script>
+	<![endif]-->
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>CyberCV Wallet details &#8211; OpenCPEs</title>
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.remove(); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[i].remove();
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+						+ '//' + window.location.hostname;
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9vcGVuY3Blcy5jb20%3D"
+		+ "&wpcomid=162006274"
+		+ "&time=1560797417";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//opencpes.wordpress.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//wordpress.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="OpenCPEs &raquo; Feed" href="https://opencpes.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="OpenCPEs &raquo; Comments Feed" href="https://opencpes.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1556893897h&ver=5.2.2-RC2-45535"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/_static/??-eJyNUe1qwzAMfKG5Wgbd6I+xZ0kcpVVr2SaSCXn7Kl+FlpHtj9HHnXzcwZCdT1ExKnBxOZQzRYEh+8ROmAKOL93Bi7zB7zSfenR6QUaxNedaQQfDjB11ihj3uIFuKHBFzbW/ubl7wCn6UFpb2wBaEoUmpBnV9HU/gugY8MAU/82YRT4xNkmbnq6E4IQUHbakFM+rUshJVOyQqJtvLudfp3/atPpjCLYPagwmKOoejfPnxprKi/m0m8YSW9PkHkWcvUyF13j25fEkZclgNvBpslAJYlIytjyKafHD39XxePqovqrT+/UO+cXj7g==?cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfifteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Noto+Sans%3A400italic%2C700italic%2C400%2C700%7CNoto+Serif%3A400italic%2C700italic%2C400%2C700%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s2.wp.com/_static/??-eJyNjcEKgCAQRH8o24QiL9G/JJtZukm7Ev190qlL0G1484aBMym7kyAJxKxSyM4Tg0PCw5fiI9aWuYLXVhaMyJDyBHIWcM1+FkQClivgf72IMIXdbs/FGAfdtcbopjd6vQFkiUB7?cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfifteen-ie-css'  href='https://s2.wp.com/wp-content/themes/pub/twentyfifteen/css/ie.css?m=1509656138h&#038;ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentyfifteen-ie7-css'  href='https://s2.wp.com/wp-content/themes/pub/twentyfifteen/css/ie7.css?m=1418225460h&#038;ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='all-css-6-1' href='https://s2.wp.com/_static/??-eJx9kNEKgzAMRX9oXSZMwYexb6kl1o62KU1E/PvVTXAy6FNyQ05uEliSMhQFo4BMGJAhzQPIUgrr6EZBjGCYgWX1qJZkKFyLvsAPGGaV/GxdZLBIypPR4iiehBq9drmGZhw82ZLaj+Eha5A22/BB5yOrtSdi+W4CPOm8ee2xRjEZp305xdJZ/EH7C6c7WE+D9lvDMzyatrvdu77p29cbis+KHw==?cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJyFztEKwjAMBdAfsisyOnwRv6XWOFKXtDbphn69HeiDMBQC9+EeuLFLNshhqhcQG9vdK5THO7ooO/sLGMKxeIWOkD84JFZgXW1OogQifoSNltIZJzBVoDTA2mauacN9v4Q8Iyx/WQTNPtxMAcHnun6i4965Q++GwfXxBTkPW9k='></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://opencpes.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://opencpes.com/opencpes/opencpes-ocl-and-cybercv-wallet-technical-information/cybercv-wallet-details/" />
+<link rel='shortlink' href='https://wp.me/PaXLeq-2V' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fopencpes.com%2Fopencpes%2Fopencpes-ocl-and-cybercv-wallet-technical-information%2Fcybercv-wallet-details%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fopencpes.com%2Fopencpes%2Fopencpes-ocl-and-cybercv-wallet-technical-information%2Fcybercv-wallet-details%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="CyberCV Wallet details" />
+<meta property="og:url" content="https://opencpes.com/opencpes/opencpes-ocl-and-cybercv-wallet-technical-information/cybercv-wallet-details/" />
+<meta property="og:description" content="The CyberCV wallet (a mobile client for Apple iOS and Google Android) is currently under development, if you want to be informed when it becomes available please signup to our CyberCV Wallet Google…" />
+<meta property="article:published_time" content="2019-05-28T20:27:17+00:00" />
+<meta property="article:modified_time" content="2019-06-04T16:32:34+00:00" />
+<meta property="og:site_name" content="OpenCPEs" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="CyberCV Wallet details" />
+<meta name="twitter:image" content="https://opencpes.files.wordpress.com/2019/05/screen-shot-2019-05-09-at-4.17.26-pm.png" />
+<meta name="twitter:card" content="summary" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon-precomposed" href="https://s2.wp.com/i/webclip.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://opencpes.com/osd.xml" title="OpenCPEs" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="theme-color" content="#f1f1f1" />
+<meta name="application-name" content="OpenCPEs" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Transforming Knowledge into Currency" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://opencpes.com/feed/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico" /><meta name="description" content="The CyberCV wallet (a mobile client for Apple iOS and Google Android) is currently under development, if you want to be informed when it becomes available please signup to our CyberCV Wallet Google Group (a low volume announcement list for CyberCV Wallet announcements). To register your QR code claim via email simply email the picture to centsi@opencpes.com and it&hellip;" />
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body class="page-template-default page page-id-181 page-child parent-pageid-166 wp-embed-responsive mp6 customizer-styles-applied has-site-logo highlander-enabled highlander-light custom-colors">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<div id="sidebar" class="sidebar">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-branding">
+				<a href="https://opencpes.com/" class="site-logo-link" rel="home"><img width="81" height="96" src="https://opencpes.files.wordpress.com/2019/05/screen-shot-2019-05-09-at-4.17.26-pm.png?w=81" class="site-logo attachment-twentyfifteen-logo" alt="" data-size="twentyfifteen-logo" data-attachment-id="77" data-permalink="https://opencpes.com/screen-shot-2019-05-09-at-4-17-26-pm/" data-orig-file="https://opencpes.files.wordpress.com/2019/05/screen-shot-2019-05-09-at-4.17.26-pm.png" data-orig-size="81,96" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Screen Shot 2019-05-09 at 4.17.26 PM" data-image-description="" data-medium-file="https://opencpes.files.wordpress.com/2019/05/screen-shot-2019-05-09-at-4.17.26-pm.png?w=81" data-large-file="https://opencpes.files.wordpress.com/2019/05/screen-shot-2019-05-09-at-4.17.26-pm.png?w=81" /></a>
+										<p class="site-title"><a href="https://opencpes.com/" rel="home">OpenCPEs</a></p>
+												<p class="site-description">Transforming Knowledge into Currency</p>
+										<button class="secondary-toggle">Menu and widgets</button>
+			</div><!-- .site-branding -->
+		</header><!-- .site-header -->
+
+			<div id="secondary" class="secondary">
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+				<div class="menu-primary-container"><ul id="menu-primary" class="nav-menu"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a href="/">Home</a></li>
+</ul></div>			</nav><!-- .main-navigation -->
+		
+		
+					<div id="widget-area" class="widget-area" role="complementary">
+				<aside id="search-1" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://opencpes.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit screen-reader-text" value="Search" />
+			</form></aside>			</div><!-- .widget-area -->
+		
+	</div><!-- .secondary -->
+
+	</div><!-- .sidebar -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+<article id="post-181" class="post-181 page type-page status-publish hentry">
+	
+	<header class="entry-header">
+		<h1 class="entry-title">CyberCV Wallet details</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<p>The CyberCV wallet (a mobile client for Apple iOS and Google Android) is currently under development, if you want to be informed when it becomes available please signup to our <a href="https://groups.google.com/a/announcements.opencpes.com/d/forum/cybercv-wallet">CyberCV Wallet Google Group</a> (a low volume announcement list for CyberCV Wallet announcements).</p>
+
+
+
+<p>To register your QR code claim via email simply email the picture to <a href="mailto:centsi@opencpes.com">centsi@opencpes.com</a> and it will added to the Blockchain, allowing you to later prove that you had the QR code on the date of the event and didn’t copy and register it at some later date. </p>
+
+
+
+<p><strong>Privacy considerations:</strong> The CyberCV holds and can be used to submit your most valuable and personal data. As such we have two main strategies to protect your data while it is stored and when it is submitted.  For storage we have a simple strategy: you store your own data and you control how your data is distributed, and you are responsible for distribution. In line with this the CyberCV Wallet does not submit your data for processing to create a validation record. Instead the CyberCV Wallet generates a random string (a &#8220;nonce&#8221;), and takes a hash of the original data and the nonce, the CyberCV Wallet then submits this hash to the OpenCPEs system for witnessing and the creation of the validation record.  Your personal data never leaves your system unless you explicitly send it to someone else. You remain in control of your data at all times.</p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-181" class="share-twitter sd-button share-icon" href="https://opencpes.com/opencpes/opencpes-ocl-and-cybercv-wallet-technical-information/cybercv-wallet-details/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-181" class="share-facebook sd-button share-icon" href="https://opencpes.com/opencpes/opencpes-ocl-and-cybercv-wallet-technical-information/cybercv-wallet-details/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-162006274-181-5d07e0e91f3d6' data-src='//widgets.wp.com/likes/index.html?ver=20190321#blog_id=162006274&amp;post_id=181&amp;origin=opencpes.wordpress.com&amp;obj_id=162006274-181-5d07e0e91f3d6&amp;domain=opencpes.com' data-name='like-post-frame-162006274-181-5d07e0e91f3d6'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>			</div><!-- .entry-content -->
+
+	
+</article><!-- #post-## -->
+
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+<script type='text/javascript'>
+								var _gaq = _gaq || [];
+								_gaq.push(['_setAccount', 'UA-22477883-19']);
+_gaq.push(['_trackPageview']);
+
+								(function() {
+									var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+									ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+									var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+								})();
+							</script>
+
+	</div><!-- .site-content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+									<a></a>
+		</div><!-- .site-info -->
+	</footer><!-- .site-footer -->
+
+</div><!-- .site -->
+
+<!--  -->
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201925y'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/opencpes.com\/opencpes\/opencpes-ocl-and-cybercv-wallet-technical-information\/cybercv-wallet-details\/":181};
+	</script>
+				<script type='text/javascript'>
+/* <![CDATA[ */
+var comment_like_text = {"loading":"Loading..."};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var actionbardata = {"siteID":"162006274","siteName":"OpenCPEs","siteURL":"https:\/\/opencpes.com","icon":"<img alt='' src='https:\/\/s2.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/twentyfifteen","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fopencpes.com%2Fopencpes%2Fopencpes-ocl-and-cybercv-wallet-technical-information%2Fcybercv-wallet-details%2F&signup_flow=account&domain=opencpes.com","themeURL":"https:\/\/wordpress.com\/theme\/twentyfifteen\/","xhrURL":"https:\/\/opencpes.com\/wp-admin\/admin-ajax.php","nonce":"4a96c81356","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"bd2a81793c\" \/>","referer":"https:\/\/opencpes.com\/opencpes\/opencpes-ocl-and-cybercv-wallet-technical-information\/cybercv-wallet-details\/","canFollow":"","feedID":"95502461","statusMessage":"","customizeLink":"https:\/\/opencpes.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fopencpes.wordpress.com%2Fopencpes%2Fopencpes-ocl-and-cybercv-wallet-technical-information%2Fcybercv-wallet-details%2F","postID":"181","shortlink":"https:\/\/wp.me\/PaXLeq-2V","canEditPost":"","editLink":"https:\/\/wordpress.com\/page\/opencpes.com\/181","statsLink":"https:\/\/wordpress.com\/stats\/post\/181\/opencpes.com","i18n":{"view":"View site","follow":"Follow","following":"Following","edit":"Edit","login":"Log in","signup":"Sign up","customize":"Customize","report":"Report this content","themeInfo":"Get theme: Twenty Fifteen","shortlink":"Copy shortlink","copied":"Copied","followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","editSubs":"Manage subscriptions","viewReader":"View site in Reader","viewReadPost":"View post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email address","followers":"","alreadyUser":"Already have a WordPress.com account? <a href=\"https:\/\/wordpress.com\/log-in?redirect_to=https%3A%2F%2Fopencpes.com%2Fopencpes%2Fopencpes-ocl-and-cybercv-wallet-technical-information%2Fcybercv-wallet-details%2F&signup_flow=account&domain=opencpes.com\">Log in now.<\/a>","stats":"Stats"}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyVj91qwzAMhV9onuhYYLkoexbHkRslsexZctO9/ZyNlf5AIFcSR+eTdGBJxkVWZIVRoMczOUyX11Fe4GYUiklzORELzDShwFfBgoPlfsa8YXYxhCqZP2hc6Q5koYR7oDvhEdQBQ7Wl0oEuVfj25BWRV1AmSpXiyfjoihhPT8m2cF/YKUXedXNJ9d2NdLYPxKazGYIVxVw7E8+YM/V15VXbuUGzddPTn7fQb5IVunYb7hRFjZ8tZZDBZuLTf63QZzgemua9bduP5m38Aehm2bY='></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>		<iframe src='https://widgets.wp.com/likes/master.html?ver=20190321#ver=20190321' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="//stats.wp.com/w.js?60" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'162006274','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'162006274','v':'wpcom','tz':'0','user_id':'0','post':'181','subd':'opencpes'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1TaVhzUzFMbjdWNHpwZGhTayxPSUFCMGNrd29+Smw0TDhnZmRTK0hlRi9QSGh6bi9GXVhBJWIlZlR5U1JMLU8/MkNtblkvY1dzK3YrWW0ubDZpRDdNUGQmR3EyalZIczZtJSZDPzIweDh3d29iLzBbSDVNcHlSSHk4UlBWW21TVlZPT0d6YXNzZDZQelFyfmt+S3FPT0h+QlU0ajdYS0ZyLFdtT2s0MjNuXzRCXXx5dDB5PT8xJkx4PTNQTW1fcHF8cWk0bC9xem58cS80RUktK1FfUC1UczJMTDNNeUZjb212OVVzaF1FN3BmLlY5TlRHVXk5eA=='}]);
+_stq.push([ 'clickTrackerInit', '162006274', '181' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>
