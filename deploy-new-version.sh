@@ -2,6 +2,11 @@
 # ensure we have latest opencpes.com
 git pull
 
+# remove the precache manifest since it gets blown away anyways
+git rm -rf build/precache-manifest.[0-9a-f]*.js
+git commit -m "removed precache-manifest" 
+git push
+
 CURRENT_DIR=`pwd`
 #docker build . -t opencpes-build -f CURRENT_DIR/Dockerfile
 docker run -v $CURRENT_DIR:/opencpes.com -it  opencpes-build  /build-script.sh
