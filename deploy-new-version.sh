@@ -14,6 +14,7 @@ docker run -v $CURRENT_DIR:/opencpes.com -it  opencpes-build  /build-script.sh
 # update git build dir #
 git add -A build/*
 git commit -m "npm run build 2019-06-25-13-00" build/*
+git push
 
 ### create a new S3 bucket
 # s3 synch /build to the S3 bucket
