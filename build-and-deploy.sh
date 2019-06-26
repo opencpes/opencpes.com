@@ -35,8 +35,10 @@ git push
 # STAGE 2
 # Startup a Docker container with nodejs and manually cal it to use the build-script.sh
 #
-# Optional: first time you'll need to build the container:
-# docker build . -t opencpes-build -f CURRENT_DIR/build-and-deploy/docker-node-build/Dockerfile
+# OPTIONAL CONTAINER BUILD/UPDATE STEP: first time you'll need to build the container, 
+# or if we update the build script:
+# cd ./build-and-deploy/docker-node-build/
+# docker build . -t opencpes-build -f Dockerfile
 
 CURRENT_DIR=`pwd`
 docker run -v $CURRENT_DIR:/opencpes.com -it  opencpes-build  /build-script.sh
@@ -51,6 +53,15 @@ git push
 # long term: we create a new S3 bucket and update the Cloudflare DNS to point at it, 
 # and create a new Cloudflare entry for the previous bucket, this allows us to easily roll
 # back if the website gets broken (short term: we roll git back and rebuild)
+
+# OPTIONAL CONTAINER BUILD/UPDATE STEP: first time you'll need to build the container,
+# or if we update the build script:
+# cd ./build-and-deploy/docker-s3-synch/
+# docker build . -t opencpes-s3-synch -f Dockerfile
+
+#CURRENT_DIR=`pwd`
+#docker run -v $CURRENT_DIR:/opencpes.com -it  opencpes-s3-synch  /build-script.sh
+
 
 # STAGE 4
 # we run the website through WebsiteWatcher (WSW) running in AWS workspace, this is
