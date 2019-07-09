@@ -151,10 +151,7 @@ const App = props => {
       slug: '/faq',
       md: process.env.REACT_APP_MD_SRC + 'pages/faq.md',
       render: DefaultPage
-    }
-  ];
-
-  const codex = [
+    },
     {
       slug: '/codex/source-code',
       md: process.env.REACT_APP_MD_SRC + 'codex/source-code.md',
@@ -163,6 +160,16 @@ const App = props => {
     {
       slug: '/codex/technical-details',
       md: process.env.REACT_APP_MD_SRC + 'codex/technical-details.md',
+      render: DefaultPage
+    },
+    {
+      slug: '/codex/cybercv-wallet-details',
+      md: process.env.REACT_APP_MD_SRC + 'codex/cybercv-wallet.md',
+      render: DefaultPage
+    },
+    {
+      slug: '/',
+      md: process.env.REACT_APP_MD_SRC + 'pages/temphome.md',
       render: DefaultPage
     }
   ];
@@ -218,6 +225,10 @@ const App = props => {
             <Typography variant="h6" color="inherit" className={classes.title}>
               OpenCPEs
             </Typography>
+
+            <Link to="/" variant="body2" className={classes.menu_item}>
+              Home
+            </Link>
 
             <Link
               to="/getting-started"
@@ -347,21 +358,8 @@ const App = props => {
                 render={props => <page.render markDown={page.md} {...props} />}
               />
             ))}
-            {codex.map((article, index) => (
-              <Route
-                key={index}
-                path={article.slug}
-                render={props => (
-                  <article.render markDown={article.md} {...props} />
-                )}
-              />
-            ))}
-            <Route
-              path="/codex"
-              exact
-              render={props => <Codex codex={codex} {...props} />}
-            />
-            <Route path="/" exact component={Home} />
+
+            {/*<Route path="/" exact component={Home} />*/}
           </Switch>
         </main>
       </div>

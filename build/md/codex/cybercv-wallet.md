@@ -1,0 +1,7 @@
+# CyberCV Wallet details
+
+The CyberCV wallet (a mobile client for Apple iOS and Google Android) is currently under development, if you want to be informed when it becomes available please signup to our [CyberCV Wallet Google Group](https://groups.google.com/a/announcements.opencpes.com/d/forum/cybercv-wallet) (a low volume announcement list for CyberCV Wallet announcements).
+
+To register your QR code claim via email simply email the picture to [centsi@opencpes.com](mailto:centsi@opencpes.com) and it will added to the Blockchain, allowing you to later prove that you had the QR code on the date of the event and didn’t copy and register it at some later date.
+
+Privacy considerations: The CyberCV holds and can be used to submit your most valuable and personal data. As such we have two main strategies to protect your data while it is stored and when it is submitted. For storage we have a simple strategy: you store your own data and you control how your data is distributed, and you are responsible for distribution. In line with this the CyberCV Wallet does not submit your data for processing to create a validation record. Instead the CyberCV Wallet generates a random string (a "nonce"), and takes a hash of the original data and the nonce, the CyberCV Wallet then submits this hash to the OpenCPEs system for witnessing and the creation of the validation record. Your personal data never leaves your system unless you explicitly send it to someone else. You remain in control of your data at all times.

@@ -52,11 +52,11 @@ Simple: you send it to the third party in some pre-agreed way (e.g. email or a s
 
 ## How does a third party validate my data?
 
-Currently we have a set of command line tools that run in a Linux/UNIX environment and a GUI client on top of them that is available for MacOS only at this time. We are working on additional tools and software. The software and data is available at <a href="https://opencpes.com/software-data-download/">https://opencpes.com/software-data-download/</a>
+Currently we have a set of command line tools that run in a Linux/UNIX environment and a GUI client on top of them that is available for MacOS only at this time. We are working on additional tools and software. The software and data is available at [https://opencpes.com/software-data-download/](https://opencpes.com/software-data-download/)
 
 ## How do I opt-in?
 
-If you want to participate you simply email any images or PDF’s you want to have witnessed and recorded with a validation record in our Blockchain by emailing&nbsp;<a href="mailto:centsi@opencpes.com">centsi@opencpes.com</a>.
+If you want to participate you simply email any images or PDF’s you want to have witnessed and recorded with a validation record in our Blockchain by emailing [centsi@opencpes.com](mailto:centsi@opencpes.com).
 
 ## How do I opt-out?
 
