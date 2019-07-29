@@ -3,9 +3,9 @@
  * for the login context api.
  ******************************************************************************* */
 
-import React from "react";
-import App from "../App";
-import { StateProvider } from "./state";
+import React from 'react';
+import App from '../App';
+import { StateProvider } from './state';
 
 const GlobalState = () => {
   let initialState = {
@@ -14,7 +14,7 @@ const GlobalState = () => {
 
   const reducer = (state, action) => {
     switch (action.type) {
-      case "setDrawerState":
+      case 'setDrawerState':
         return {
           ...state,
           drawerState: action.drawerState

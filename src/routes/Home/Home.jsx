@@ -5,6 +5,12 @@ import React, { useEffect } from 'react';
 import HeroModule from './Modules/Hero';
 import TrustModule from './Modules/Trust';
 import DetailsModule from './Modules/Details';
+import TechModule from './Modules/Tech';
+import WhatModule from './Modules/What';
+import BetaModule from './Modules/Beta';
+import Beta2Module from './Modules/Beta2';
+import Beta3Module from './Modules/Beta3';
+
 // @material-ui
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 // context
@@ -28,84 +34,29 @@ const LandingPage = props => {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
-    // use global context state to close drawer if closed
-    // TODO: this needs responsive reivew.
-    dispatch({
-      type: 'setDrawerState',
-      drawerState: false
-    });
     var href = window.location.href.substring(
       window.location.href.lastIndexOf('#') + 1
     );
     if (window.location.href.lastIndexOf('#') > 0)
       document.getElementById(href).scrollIntoView();
-    window.addEventListener('scroll', updateView);
-    updateView();
+    window.addEventListener('scroll', props.updateView);
+    props.updateView();
     // Clean up after this effect:
     return function cleanup() {
       // remove event listener
-      window.removeEventListener('scroll', updateView);
+      window.removeEventListener('scroll', props.updateView);
     };
   }, []);
 
-  const easeInOutQuad = (t, b, c, d) => {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
-  };
-
-  const updateView = () => {
-    var contentSections = document.getElementsByClassName('cd-section');
-    var navigationItems = document
-      .getElementById('cd-vertical-nav')
-      .getElementsByTagName('a');
-
-    for (let i = 0; i < contentSections.length; i++) {
-      var activeSection =
-        parseInt(navigationItems[i].getAttribute('data-number'), 10) - 1;
-      if (
-        contentSections[i].offsetTop - window.innerHeight / 2 <
-          window.pageYOffset &&
-        contentSections[i].offsetTop +
-          contentSections[i].scrollHeight -
-          window.innerHeight / 2 >
-          window.pageYOffset
-      ) {
-        navigationItems[activeSection].classList.add('is-selected');
-      } else {
-        navigationItems[activeSection].classList.remove('is-selected');
-      }
-    }
-  };
-
-  const smoothScroll = target => {
-    var targetScroll = document.getElementById(target);
-    scrollGo(document.documentElement, targetScroll.offsetTop, 1250);
-  };
-
-  const scrollGo = (element, to, duration) => {
-    var start = element.scrollTop,
-      change = to - start,
-      currentTime = 0,
-      increment = 20;
-
-    var animateScroll = function() {
-      currentTime += increment;
-      var val = easeInOutQuad(currentTime, start, change, duration);
-      element.scrollTop = val;
-      if (currentTime < duration) {
-        setTimeout(animateScroll, increment);
-      }
-    }.bind(this);
-    animateScroll();
-  };
-
   return (
     <>
-      <HeroModule smoothScroll={smoothScroll} />
+      <HeroModule smoothScroll={props.smoothScroll} />
+      <WhatModule smoothScroll={props.smoothScroll} />
       <DetailsModule />
-      <TrustModule />
+      <BetaModule />
+      <Beta2Module />
+      <Beta3Module />
+      <TechModule techJSON={props.techJSON} />
 
       <nav id="cd-vertical-nav">
         <ul>
@@ -122,7 +73,7 @@ const LandingPage = props => {
                   // if we are on mobile device the scroll into view will be managed by the browser
                 } else {
                   e.preventDefault();
-                  smoothScroll('Hero');
+                  props.smoothScroll('Hero');
                 }
               }}
             >
@@ -132,7 +83,7 @@ const LandingPage = props => {
           </li>
           <li>
             <a
-              href="#Details"
+              href="#What"
               data-number="2"
               className=""
               onClick={e => {
@@ -143,17 +94,17 @@ const LandingPage = props => {
                   // if we are on mobile device the scroll into view will be managed by the browser
                 } else {
                   e.preventDefault();
-                  smoothScroll('Details');
+                  props.smoothScroll('What');
                 }
               }}
             >
               <span className="cd-dot" />
-              <span className="cd-label">Details</span>
+              <span className="cd-label">About</span>
             </a>
           </li>
           <li>
             <a
-              href="#Trust"
+              href="#Details"
               data-number="3"
               className=""
               onClick={e => {
@@ -164,12 +115,75 @@ const LandingPage = props => {
                   // if we are on mobile device the scroll into view will be managed by the browser
                 } else {
                   e.preventDefault();
-                  smoothScroll('Trust');
+                  props.smoothScroll('Details');
                 }
               }}
             >
               <span className="cd-dot" />
-              <span className="cd-label">Trust</span>
+              <span className="cd-label">Details</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Beta"
+              data-number="4"
+              className=""
+              onClick={e => {
+                var isMobile = navigator.userAgent.match(
+                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
+                );
+                if (isMobile) {
+                  // if we are on mobile device the scroll into view will be managed by the browser
+                } else {
+                  e.preventDefault();
+                  props.smoothScroll('Beta');
+                }
+              }}
+            >
+              <span className="cd-dot" />
+              <span className="cd-label">Beta</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Tech"
+              data-number="5"
+              className=""
+              onClick={e => {
+                var isMobile = navigator.userAgent.match(
+                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
+                );
+                if (isMobile) {
+                  // if we are on mobile device the scroll into view will be managed by the browser
+                } else {
+                  e.preventDefault();
+                  props.smoothScroll('Tech');
+                }
+              }}
+            >
+              <span className="cd-dot" />
+              <span className="cd-label">Tech</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#StayConnected"
+              data-number="6"
+              className=""
+              onClick={e => {
+                var isMobile = navigator.userAgent.match(
+                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
+                );
+                if (isMobile) {
+                  // if we are on mobile device the scroll into view will be managed by the browser
+                } else {
+                  e.preventDefault();
+                  props.smoothScroll('StayConnected');
+                }
+              }}
+            >
+              <span className="cd-dot" />
+              <span className="cd-label">Connect</span>
             </a>
           </li>
         </ul>
