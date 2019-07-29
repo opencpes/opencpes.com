@@ -110,6 +110,9 @@ const Menu = props => {
             <Link to="/codex" className={classes.menuBottomLink}>
               Codex
             </Link>
+            <Link to="/codex/source-code" className={classes.menuBottomLink}>
+              Source Code
+            </Link>
           </div>
           <Button
             variant="contained"
