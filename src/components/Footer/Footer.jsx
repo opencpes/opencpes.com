@@ -39,7 +39,10 @@ const useStyles = makeStyles(theme => ({
   },
   address: {
     fontSize: '16px',
-    lineHeight: '1.7'
+    lineHeight: '1.7',
+    '& a': {
+      color: '#54585A'
+    }
   },
   footerBase: {
     padding: '20px 0 0',
@@ -135,21 +138,22 @@ const Footer = props => {
             <Grid item xs={6} sm={3} md={2}>
               <Typography className={classes.address}>
                 <b>CONTACT US</b> <br />
-                CPE Corporate Office
+                {/*  CPE Corporate Office
                 <br />
                 123 Main St
                 <br />
-                Bellingham, WA 98225
+                Bellingham, WA 98225*/}
+                <a href="mailto:contact@opencpes.com">contact@opencpes.com</a>
               </Typography>
             </Grid>
             <Grid item xs={6} sm={3} md={2}>
-              <Typography className={classes.address}>
+              {/*  <Typography className={classes.address}>
                 <br />
                 <br />
                 (555) 555-5555
                 <br />
                 support@CPE.com
-              </Typography>
+  </Typography> */}
             </Grid>
           </Grid>
 

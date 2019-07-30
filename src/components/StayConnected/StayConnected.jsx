@@ -58,15 +58,16 @@ const StayConnected = props => {
               </Typography>
               <Typography variant="body1" className={classes.text}>
                 To receive <b>general announcements</b> about the OpenCPEs
-                platform please join the announcements@ group by sending an
-                email to:{' '}
+                platform please join the announcements group by sending an email
+                to:{' '}
                 <a href="mailto:announcements+subscribe@opencpes.com">
                   announcements+subscribe@opencpes.com
                 </a>
               </Typography>
               <Typography variant="body1" className={classes.text}>
                 To get <b>technical notifications</b> about the OpenCPEs
-                platform please join the devlist@ group by sending an email to:{' '}
+                platform please join the development group by sending an email
+                to:{' '}
                 <a href="mailto:devlist+subscribe@opencpes.com">
                   devlist+subscribe@opencpes.com
                 </a>

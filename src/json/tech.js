@@ -17,6 +17,14 @@ export const techJSON = [
   },
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    slug: 'codex/protect-our-blockchain',
+    type: 'Article',
+    title: 'How we protect our BlockChain',
+    desc:
+      'in theory all client data sent to OpenCPEs is hashed with a large secret nonce and is effectively random data, random data is safe to write to a blockchain and make public, right?... '
+  },
+  {
+    id: Date.now() * Math.floor(Math.random() * 100 + 1),
     slug: 'codex/centsi-wallet-details',
     type: 'Article',
     title: 'Centsi Wallet Details',

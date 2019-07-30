@@ -51,7 +51,7 @@ const Beta2 = props => {
             >
               <Grid item xs={12} sm={9} md={5}>
                 <Typography variant="h2" className={classes.title}>
-                  Watch this Video and Create centsi
+                  Watch this Video and Create Centsi
                 </Typography>
                 <Typography className={classes.text}>
                   Create your first centsi by watching the video below (a

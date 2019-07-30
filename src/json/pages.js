@@ -50,5 +50,10 @@ export const pagesJSON = [
     slug: '/codex/client-privacy',
     md: process.env.REACT_APP_MD_SRC + 'codex/client-privacy.md',
     render: DefaultPage
+  },
+  {
+    slug: '/codex/protect-our-blockchain',
+    md: process.env.REACT_APP_MD_SRC + 'codex/protect-our-blockchain.md',
+    render: DefaultPage
   }
 ];
