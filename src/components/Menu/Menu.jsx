@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, withRouter } from 'react-router-dom';
 
 // Material-ui
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,7 +9,6 @@ import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 
 // components
-import BetaButton from './BetaButton';
 
 // Assets
 import { ReactComponent as CentsiMark } from '../../assets/img/Centsi_mark_2.svg';
@@ -118,11 +117,32 @@ const Menu = props => {
             </Link>
           </div>
 
-          <BetaButton smoothScroll={props.smoothScroll} {...props} />
+          <Button
+            variant="contained"
+            href="#Beta"
+            onClick={e => {
+              var isMobile = navigator.userAgent.match(
+                /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
+              );
+              if (isMobile) {
+                // if we are on mobile device the scroll into view will be managed by the browser
+              } else {
+                e.preventDefault();
+                if (props.location.pathname === '/') {
+                  props.smoothScroll('Beta');
+                } else {
+                  props.history.push('/getting-started');
+                }
+              }
+            }}
+            className={classes.menuBottomButton}
+          >
+            Join the Beta
+          </Button>
         </Container>
       </header>
     </>
   );
 };
 
-export default Menu;
+export default withRouter(Menu);
