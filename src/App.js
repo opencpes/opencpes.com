@@ -1,5 +1,5 @@
 // react & router
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
 // style
@@ -7,6 +7,7 @@ import './App.css';
 
 // routes
 import Home from './routes/Home/Home';
+import Codex from './routes/Codex';
 
 // components
 import Footer from './components/Footer';
@@ -16,7 +17,6 @@ import Menu from './components/Menu';
 import { makeStyles } from '@material-ui/core/styles';
 
 // json
-import { techJSON } from './json/tech';
 import { pagesJSON } from './json/pages';
 
 /********************************************************************************
@@ -129,9 +129,21 @@ const App = props => {
               <Route
                 key={index}
                 path={page.slug}
-                render={props => <page.render markDown={page.md} {...props} />}
+                render={props => (
+                  <page.render
+                    markDown={page.md}
+                    pagesJSON={pagesJSON}
+                    {...props}
+                  />
+                )}
               />
             ))}
+
+            <Route
+              path="/codex"
+              exact
+              render={props => <Codex pagesJSON={pagesJSON} {...props} />}
+            />
 
             <Route
               path="/"
@@ -140,7 +152,7 @@ const App = props => {
                 <Home
                   updateView={updateView}
                   smoothScroll={smoothScroll}
-                  techJSON={techJSON}
+                  pagesJSON={pagesJSON}
                   {...props}
                 />
               )}

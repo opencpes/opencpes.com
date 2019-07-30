@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -10,9 +10,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-
-// components
-//import { useStateValue } from "../../../contexts/state";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 /********************************************************************************
  * Some Styling
@@ -98,6 +96,17 @@ const AdapterLink = React.forwardRef((props, ref) => (
 const Tech = props => {
   const classes = useStyles();
 
+  const [techJSON, setTechJSON] = useState(null);
+
+  useEffect(() => {
+    console.log(props.pagesJSON);
+
+    let techArray = props.pagesJSON.filter(function(page) {
+      return page.tech === true;
+    });
+    setTechJSON(techArray);
+  }, [props.pagesJSON]);
+
   return (
     <>
       <div id="Tech" className="tech-section  cd-section" />
@@ -130,26 +139,30 @@ const Tech = props => {
               </Grid>
             </Grid>
             <StackGrid columnWidth={295} gutterWidth={10} gutterHeight={10}>
-              {props.techJSON.map(a => (
-                <div className={classes.artifactWrap} key={a.id}>
-                  <Typography variant="h4" className={classes.artifactTitle}>
-                    {a.title}
-                  </Typography>
-                  <Typography className={classes.artifactDesc}>
-                    {a.desc}
-                  </Typography>
-                  <div className={classes.buttonWrap}>
-                    <Button
-                      variant="contained"
-                      className={classes.button}
-                      component={AdapterLink}
-                      to={`/${a.slug}`}
-                    >
-                      Read More
-                    </Button>
+              {techJSON ? (
+                techJSON.map(a => (
+                  <div className={classes.artifactWrap} key={a.id}>
+                    <Typography variant="h4" className={classes.artifactTitle}>
+                      {a.title}
+                    </Typography>
+                    <Typography className={classes.artifactDesc}>
+                      {a.desc}
+                    </Typography>
+                    <div className={classes.buttonWrap}>
+                      <Button
+                        variant="contained"
+                        className={classes.button}
+                        component={AdapterLink}
+                        to={`/${a.slug}`}
+                      >
+                        Read More
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))
+              ) : (
+                <CircularProgress className={classes.progress} />
+              )}
             </StackGrid>
           </Container>
         </section>

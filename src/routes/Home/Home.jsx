@@ -40,7 +40,7 @@ const LandingPage = props => {
       <BetaModule />
       <Beta2Module />
       <Beta3Module />
-      <TechModule techJSON={props.techJSON} />
+      <TechModule pagesJSON={props.pagesJSON} />
 
       <nav id="cd-vertical-nav">
         <ul>
