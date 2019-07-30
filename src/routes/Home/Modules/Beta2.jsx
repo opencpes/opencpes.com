@@ -78,9 +78,9 @@ const Beta2 = props => {
               src="https://player.vimeo.com/video/243244233"
               width="640"
               height="360"
-              frameborder="0"
+              frameBorder="0"
               allow="autoplay; fullscreen"
-              allowfullscreen
+              allowFullScreen
               className={classes.video}
               title="Learn about OpenCPEs"
             />

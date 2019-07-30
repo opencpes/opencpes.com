@@ -132,7 +132,7 @@ const Tech = props => {
             </Grid>
             <StackGrid columnWidth={295} gutterWidth={10} gutterHeight={10}>
               {props.techJSON.map(a => (
-                <div className={classes.artifactWrap}>
+                <div className={classes.artifactWrap} key={a.id}>
                   <Typography variant="h4" className={classes.artifactTitle}>
                     {a.title}
                   </Typography>
