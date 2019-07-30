@@ -1,37 +1,19 @@
 // react & router
-import React, { useEffect } from 'react';
-import { Route, Switch, Redirect, Link, withRouter } from 'react-router-dom';
-import { MemoryRouter as Router } from 'react-router';
+import React from 'react';
+import { Route, Switch, withRouter } from 'react-router-dom';
 
 // style
 import './App.css';
 
 // routes
 import Home from './routes/Home/Home';
-import Codex from './routes/Codex';
-import DefaultPage from './routes/DefaultPage';
 
 // components
 import Footer from './components/Footer';
 import Menu from './components/Menu';
 
 // @material-ui
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import Collapse from '@material-ui/core/Collapse';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import { makeStyles } from '@material-ui/core/styles';
 
 // json
 import { techJSON } from './json/tech';
@@ -75,7 +57,6 @@ const useStyles = makeStyles(theme => ({
 
 const App = props => {
   const classes = useStyles();
-  const theme = useTheme();
 
   /********************************************************************************
    * Scrolling
@@ -130,7 +111,7 @@ const App = props => {
       if (currentTime < duration) {
         setTimeout(animateScroll, increment);
       }
-    }.bind(this);
+    };
     animateScroll();
   };
 

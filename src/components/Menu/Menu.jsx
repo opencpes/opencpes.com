@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import { Route, Link, withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 // Material-ui
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,8 +12,6 @@ import Button from '@material-ui/core/Button';
 
 // Assets
 import { ReactComponent as CentsiMark } from '../../assets/img/Centsi_mark_2.svg';
-// import centsiMark from '../../assets/img/Centsi_mark_2.svg';
-//import csaLogoIsol from '../../assets/img/csaLogoIsol.png';
 
 /********************************************************************************
  * Some Styling

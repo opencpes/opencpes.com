@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 
 // modules
 import HeroModule from './Modules/Hero';
-import TrustModule from './Modules/Trust';
 import DetailsModule from './Modules/Details';
 import TechModule from './Modules/Tech';
 import WhatModule from './Modules/What';
@@ -11,27 +10,11 @@ import BetaModule from './Modules/Beta';
 import Beta2Module from './Modules/Beta2';
 import Beta3Module from './Modules/Beta3';
 
-// @material-ui
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-
-// context
-import { useStateValue } from '../../contexts/state';
-
 /********************************************************************************
  * Some Styling
  ******************************************************************************* */
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex'
-  }
-}));
-
 const LandingPage = props => {
-  const [{}, dispatch] = useStateValue(); // context api
-  const classes = useStyles();
-  const theme = useTheme();
-
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -47,7 +30,7 @@ const LandingPage = props => {
       // remove event listener
       window.removeEventListener('scroll', props.updateView);
     };
-  }, []);
+  }, [props]);
 
   return (
     <>

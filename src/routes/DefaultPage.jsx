@@ -5,18 +5,13 @@ import React, { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 // @material-ui
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
 // Components
 
 import Loading from '../components/Loading';
-
-// Context API
-import { useStateValue } from '../contexts/state';
 
 /********************************************************************************
  * Some Styling
@@ -35,10 +30,8 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const DefaultPage = props => {
-  const [{}, dispatch] = useStateValue(); // context api
   const [markDown, setMarkDown] = React.useState(null);
   const classes = useStyles();
-  const theme = useTheme();
 
   useEffect(() => {
     fetch(props.markDown)
@@ -46,7 +39,7 @@ const DefaultPage = props => {
       .then(content => {
         setMarkDown(content);
       });
-  }, []);
+  }, [props.markDown]);
 
   return (
     <>
