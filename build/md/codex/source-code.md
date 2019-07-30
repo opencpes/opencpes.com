@@ -4,4 +4,4 @@ All the software needed to use OpenCPE is currently available from [https://gith
 
 The Blockchain data needed to make use of the software is also easily downloaded from [https://github.com/opencpes/opencpes-blockchain](https://github.com/opencpes/opencpes-blockchain) and is licensed under the GPLv3
 
-The CyberCV wallet (a mobile client for Apple iOS and Google Android) is currently under development, if you want to be informed of if when it is available please signup to our [CyberCV Wallet Google Group](https://groups.google.com/a/announcements.opencpes.com/d/forum/cybercv-wallet) (a low volume announcement list for CyberCV Wallet announcements).
+The centsi wallet (a mobile client for Apple iOS and Google Android) is currently under development, if you want to be informed of if when it is available please signup to our [centsi Wallet Google Group](https://groups.google.com/a/announcements.opencpes.com/d/forum/cybercv-wallet) (a low volume announcement list for centsi Wallet announcements).

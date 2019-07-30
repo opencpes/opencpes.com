@@ -13,6 +13,7 @@ import Beta3Module from './Modules/Beta3';
 
 // @material-ui
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+
 // context
 import { useStateValue } from '../../contexts/state';
 

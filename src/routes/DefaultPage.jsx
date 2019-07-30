@@ -1,19 +1,22 @@
 // react & router
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 // react-markdown
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from 'react-markdown';
 
 // @material-ui
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 // Components
 
-import Loading from "../components/Loading";
+import Loading from '../components/Loading';
 
 // Context API
-import { useStateValue } from "../contexts/state";
+import { useStateValue } from '../contexts/state';
 
 /********************************************************************************
  * Some Styling
@@ -21,16 +24,13 @@ import { useStateValue } from "../contexts/state";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: "1140px",
-    margin: "30px auto",
+    maxWidth: '1140px',
+    margin: '30px auto',
     padding: theme.spacing(3, 2)
   },
-  drawerHeader: {
-    display: "flex",
-    alignItems: "center",
-    padding: "0 8px",
-    ...theme.mixins.toolbar,
-    justifyContent: "flex-end"
+  defaultPageCon: {
+    paddingTop: '60px',
+    paddingBottom: '80px'
   }
 }));
 
@@ -50,16 +50,19 @@ const DefaultPage = props => {
 
   return (
     <>
-      <div className={classes.drawerHeader} />
-      <Paper className={classes.root}>
-        {markDown ? (
-          // show Content
-          <ReactMarkdown source={markDown} />
-        ) : (
-          // not authenticated: Show login button
-          <Loading />
-        )}
-      </Paper>
+      <Container maxWidth="lg" className={classes.defaultPageCon}>
+        <Grid container direction="row" alignItems="center">
+          <Grid item xs={12}>
+            {markDown ? (
+              // show Content
+              <ReactMarkdown source={markDown} />
+            ) : (
+              // not authenticated: Show login button
+              <Loading />
+            )}
+          </Grid>
+        </Grid>
+      </Container>
     </>
   );
 };

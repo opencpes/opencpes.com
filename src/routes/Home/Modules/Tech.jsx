@@ -144,7 +144,7 @@ const Tech = props => {
                       variant="contained"
                       className={classes.button}
                       component={AdapterLink}
-                      to={`/codex/${a.slug}`}
+                      to={`/${a.slug}`}
                     >
                       Read More
                     </Button>
