@@ -51,10 +51,10 @@ const Beta2 = props => {
             >
               <Grid item xs={12} sm={9} md={5}>
                 <Typography variant="h2" className={classes.title}>
-                  Watch this Video and Create Centsi
+                  Watch this Video and Create ¢entsi
                 </Typography>
                 <Typography className={classes.text}>
-                  Create your first centsi by watching the video below (a
+                  Create your first ¢entsi by watching the video below (a
                   pre-valued CPE) to learn about how to get started with
                   OpenCPEs. Intructions for submiting your self-claim are
                   included in the video and detailed in the next section.

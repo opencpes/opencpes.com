@@ -68,7 +68,7 @@ export const pagesJSON = [
     slug: '/codex/source-code',
     md: process.env.REACT_APP_MD_SRC + 'codex/source-code.md',
     render: Codex,
-    title: 'OpenCPEs Source Code',
+    title: 'OpenCPEs is Open Source Code and Open Data',
     desc:
       'All the software needed to use OpenCPE is currently available, and is licensed under the GPLv3. Binary release builds of the software are also available...',
     tech: true
@@ -90,9 +90,9 @@ export const pagesJSON = [
     slug: '/codex/centsi-wallet-details',
     md: process.env.REACT_APP_MD_SRC + 'codex/centsi-wallet.md',
     render: Codex,
-    title: 'Centsi Wallet Details',
+    title: '¢entsiWallet Details',
     desc:
-      'The centsi wallet (a mobile client for Apple iOS and Google Android) is currently under development, if you want to be informed when it becomes available please signup to our centsi Wallet Google Group...',
+      'The centsi wallet is a mobile client, currently available for Apple iOS in beta and in development for Google Android. If you want to be informed when it becomes available please signup to our ¢entsi announcement list',
     tech: true
   },
   {
@@ -103,7 +103,7 @@ export const pagesJSON = [
     render: Codex,
     title: 'How we Protect Client Privacy',
     desc:
-      'In order to protect the client data from simple brute force attacks against the hash value the client provides we have the client system create a random value (a secret “nonce”) that is 1024 bits in length, and then take the 512 bit hash of the original data plus the secret nonce... ',
+      'In order to protect the client data from simple brute force attacks against the hash value the client provides we have the client system create a random value (a secret “nonce”) that is 1024 bits in length, and then take a 512 bit hash of the original data plus the secret nonce... ',
     tech: true
   },
   {

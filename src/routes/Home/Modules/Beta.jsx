@@ -111,7 +111,7 @@ const Beta = props => {
                         <Grid item xs={12} md={7}>
                           <Typography variant="body1" className={classes.text}>
                             Use the QR code to the left, or the button below to
-                            access the beta CentsiWallet.
+                            access the beta ¢entsiWallet.
                           </Typography>
                           <Typography variant="body1" className={classes.text}>
                             <i>
@@ -129,7 +129,7 @@ const Beta = props => {
                               }}
                               className={classes.button}
                             >
-                              Install the CentsiWallet
+                              Install the ¢entsiWallet
                             </Button>
                           </div>
                         </Grid>

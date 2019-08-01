@@ -77,11 +77,12 @@ const Details = props => {
                   </Typography>
                   <Typography variant="body1" className={classes.text}>
                     ¢entsi is not a cryptocurrency. ¢entsi is a pseudo
-                    cryptocurrency, it can be used to measure value but unlike a
-                    currency it cannot be spent, once ¢entsi is entered into a
-                    users wallet it cannot leave. The main goal of ¢entsi is to
-                    provide an abstraction and make it easier for users to
-                    express the value of their CPE history.
+                    cryptocurrency, it can be used to express and measure value,
+                    but unlike a currency it cannot be transferred or spent,
+                    once ¢entsi is entered into a users wallet it cannot leave.
+                    The main goal of ¢entsi is to provide an abstraction of time
+                    and value to make it easier for users to express their CPE
+                    history.
                   </Typography>
                 </div>
               </Grid>
@@ -92,10 +93,11 @@ const Details = props => {
                     Harnessing Blockchain Technology
                   </Typography>
                   <Typography variant="body1" className={classes.text}>
-                    None of the existing Blockchains had the privacy technology
-                    we needed, so rather than add our layer on top of something
-                    complex we simply created a proof of concept chain that can
-                    be used to validate data and prove it’s veracity.
+                    None of the existing Blockchains had the privacy
+                    capabilities we needed, so rather than add our layer on top
+                    of something complex we simply created a proof of concept
+                    chain that can be used to validate data and prove it’s
+                    veracity.
                   </Typography>
                 </div>
               </Grid>
@@ -106,8 +108,9 @@ const Details = props => {
                     Privacy by Default
                   </Typography>
                   <Typography variant="body1" className={classes.text}>
-                    Designed from the ground up with Secure Proofs to be
-                    insanely private! We don’t store your data. We do not
+                    Designed from the ground up with Secure Proofs (a
+                    combination of random secret data and NIST approved hashing)
+                    to be insanely private! We don’t store your data. We do not
                     transfer your data to third parties.
                   </Typography>
                 </div>
