@@ -12,9 +12,11 @@ import Codex from './routes/Codex';
 // components
 import Footer from './components/Footer';
 import Menu from './components/Menu';
+import Mobile from './components/Menu/Mobile';
 
 // @material-ui
 import { makeStyles } from '@material-ui/core/styles';
+import Hidden from '@material-ui/core/Hidden';
 
 // json
 import { pagesJSON } from './json/pages';
@@ -101,7 +103,12 @@ const App = props => {
   return (
     <>
       <div className={classes.root}>
-        <Menu smoothScroll={smoothScroll} />
+        <Hidden smDown>
+          <Menu smoothScroll={smoothScroll} />
+        </Hidden>
+        <Hidden mdUp>
+          <Mobile />
+        </Hidden>
 
         <main id="main">
           <Switch>

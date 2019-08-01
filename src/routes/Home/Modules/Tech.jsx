@@ -99,7 +99,7 @@ const Tech = props => {
   const [techJSON, setTechJSON] = useState(null);
 
   useEffect(() => {
-    console.log(props.pagesJSON);
+    //console.log(props.pagesJSON);
 
     let techArray = props.pagesJSON.filter(function(page) {
       return page.tech === true;
