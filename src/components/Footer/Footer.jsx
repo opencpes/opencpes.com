@@ -92,50 +92,34 @@ const Footer = props => {
           >
             <Grid item xs={6} sm={3} md={2}>
               <Typography className={classes.footerBodyMenu}>
-                <Link
-                  to="/privacy-policy"
-                  className={classes.footerBodyMenuLink}
-                >
-                  About OpenCPEs
+                <Link to="/" className={classes.footerBodyMenuLink}>
+                  OpenCPEs
                 </Link>
                 <br />
                 <Link
-                  to="/privacy-policy"
+                  to="/getting-started"
                   className={classes.footerBodyMenuLink}
                 >
-                  What is Centsi?
+                  Get Started
                 </Link>
                 <br />
-                <Link
-                  to="/privacy-policy"
-                  className={classes.footerBodyMenuLink}
-                >
-                  Leadership
+                <Link to="/faq" className={classes.footerBodyMenuLink}>
+                  FAQ
                 </Link>
               </Typography>
             </Grid>
 
             <Grid item xs={6} sm={3} md={2}>
               <Typography className={classes.footerBodyMenu}>
-                <Link
-                  to="/privacy-policy"
-                  className={classes.footerBodyMenuLink}
-                >
-                  Link Here
+                <Link to="/codex" className={classes.footerBodyMenuLink}>
+                  Codex
                 </Link>
                 <br />
                 <Link
-                  to="/privacy-policy"
+                  to="/codex/source-code"
                   className={classes.footerBodyMenuLink}
                 >
-                  Link Here
-                </Link>
-                <br />
-                <Link
-                  to="/privacy-policy"
-                  className={classes.footerBodyMenuLink}
-                >
-                  Link Here
+                  Source Code
                 </Link>
               </Typography>
             </Grid>

@@ -49,7 +49,10 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     color: '#fff',
-    paddingBottom: '25px'
+    paddingBottom: '25px',
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center'
+    }
   },
   gridWrap: {
     paddingTop: '40px',
@@ -57,11 +60,18 @@ const useStyles = makeStyles(theme => ({
   },
   qr: {
     maxWidth: '70%',
-    border: '20px solid #7CCFDD'
+    border: '20px solid #7CCFDD',
+    [theme.breakpoints.down('sm')]: {
+      display: 'block',
+      margin: '0 auto 30px auto'
+    }
   },
   buttonWrap: {
     display: 'flex',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'center'
+    }
   },
   button: {
     color: '#fff',

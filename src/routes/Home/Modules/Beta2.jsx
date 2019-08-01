@@ -31,7 +31,8 @@ const useStyles = makeStyles(theme => ({
   video: {
     border: '20px solid #7CCFDD',
     margin: '0px auto',
-    display: 'block'
+    display: 'block',
+    maxWidth: '100%'
   }
 }));
 
