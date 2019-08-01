@@ -37,9 +37,11 @@ const LandingPage = props => {
       <HeroModule smoothScroll={props.smoothScroll} />
       <WhatModule smoothScroll={props.smoothScroll} />
       <DetailsModule />
-      <BetaModule />
-      <Beta2Module />
-      <Beta3Module />
+      <div name="Beta" id="Beta" className="beta-section  cd-section">
+        <BetaModule />
+        <Beta2Module />
+        <Beta3Module />
+      </div>
       <TechModule pagesJSON={props.pagesJSON} />
 
       <nav id="cd-vertical-nav">

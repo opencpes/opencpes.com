@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import { Link, withRouter } from 'react-router-dom';
@@ -12,6 +12,7 @@ import Button from '@material-ui/core/Button';
 
 // Assets
 import { ReactComponent as CentsiMark } from '../../assets/img/Centsi_mark_2.svg';
+import { ReactComponent as OpenCPEsMark } from '../../assets/img/opencpes_final-08.svg';
 
 /********************************************************************************
  * Some Styling
@@ -75,23 +76,38 @@ const useStyles = makeStyles(theme => ({
       cursor: 'pointer',
       background: '#474E5E'
     }
+  },
+  OpenCPEsMark: {
+    maxWidth: '150px'
   }
 }));
 
 const Menu = props => {
   const classes = useStyles();
 
+  const [actionButton, setActionButton] = useState(null);
+
   const [ref, inView, entry] = useInView({
     /* Optional options */
     threshold: 0
   });
+
+  useEffect(() => {
+    if (props.location.pathname === '/') {
+      setActionButton('Join the Beta');
+    } else {
+      setActionButton('Get Started');
+    }
+  }, [props.location.pathname]);
 
   return (
     <>
       <div className={classes.menuTop} ref={ref}>
         <Container maxWidth="lg" className={classes.menuTopCon}>
           <div className={classes.logoWrap}>
-            <span className="ph">CPE LOGO HERE</span>
+            <Link to="/">
+              <OpenCPEsMark className={classes.OpenCPEsMark} />
+            </Link>
           </div>
         </Container>
       </div>
@@ -135,7 +151,7 @@ const Menu = props => {
             }}
             className={classes.menuBottomButton}
           >
-            Join the Beta
+            {actionButton}
           </Button>
         </Container>
       </header>

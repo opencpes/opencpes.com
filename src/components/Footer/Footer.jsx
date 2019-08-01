@@ -11,6 +11,7 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
 // Assets
+import { ReactComponent as OpenCPEsMark } from '../../assets/img/opencpes_final-08.svg';
 
 /********************************************************************************
  * Some Styling
@@ -66,6 +67,10 @@ const useStyles = makeStyles(theme => ({
       fontWeight: '700',
       paddingLeft: '15px'
     }
+  },
+  OpenCPEsMark: {
+    maxWidth: '150px',
+    marginTop: '-8px'
   }
 }));
 
@@ -159,7 +164,7 @@ const Footer = props => {
 
           <div className={classes.footerBase}>
             <div className={classes.logoWrap}>
-              <span className="ph">CPE LOGO HERE</span>
+              <OpenCPEsMark className={classes.OpenCPEsMark} />
             </div>
 
             <Typography className={classes.footerBaseText}>

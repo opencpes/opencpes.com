@@ -78,7 +78,6 @@ const Beta = props => {
 
   return (
     <>
-      <div name="Beta" id="Beta" className="beta-section  cd-section" />
       <div className={classes.backgroundSkewWrap}>
         <div className={classes.backgroundSkew1}>
           <div className={classes.backgroundSkew2}>

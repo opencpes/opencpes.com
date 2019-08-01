@@ -36,7 +36,8 @@ const theme = createMuiTheme({
       fontWeight: '300'
     },
     h1: {
-      fontSize: '28px',
+      color: '#54585A',
+      fontSize: '51px',
       fontFamily: 'sofia-pro-soft, sans-serif',
       fontWeight: '500'
     },
