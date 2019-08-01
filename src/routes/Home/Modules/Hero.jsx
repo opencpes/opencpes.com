@@ -22,7 +22,13 @@ const useStyles = makeStyles(theme => ({
     padding: '100px 0',
     backgroundImage: `url(${herobeta})`,
     backgroundPosition: '73% 50%',
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat: 'no-repeat',
+    [theme.breakpoints.down('md')]: {
+      backgroundPosition: '85% 50%'
+    },
+    [theme.breakpoints.down('sm')]: {
+      backgroundImage: 'none'
+    }
   },
   title: {
     paddingBottom: '35px'
@@ -45,7 +51,7 @@ const Hero = props => {
                 justify="center"
                 alignItems="center"
               >
-                <Grid item xs={4}>
+                <Grid item xs={12} md={4}>
                   <Typography variant="h1" className={classes.title}>
                     Transforming Knowledge into Currency
                   </Typography>

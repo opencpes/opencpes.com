@@ -1,6 +1,9 @@
 // react & router
 import React, { useEffect } from 'react';
 
+// Material-ui
+import { makeStyles } from '@material-ui/core/styles';
+
 // modules
 import HeroModule from './Modules/Hero';
 import DetailsModule from './Modules/Details';
@@ -14,7 +17,20 @@ import Beta3Module from './Modules/Beta3';
  * Some Styling
  ******************************************************************************* */
 
+const useStyles = makeStyles(theme => ({
+  root: {
+    //background: '#474E5E'
+  },
+  cdVerticalNav: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    }
+  }
+}));
+
 const LandingPage = props => {
+  const classes = useStyles();
+
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -44,7 +60,7 @@ const LandingPage = props => {
       </div>
       <TechModule pagesJSON={props.pagesJSON} />
 
-      <nav id="cd-vertical-nav">
+      <nav id="cd-vertical-nav" className={classes.cdVerticalNav}>
         <ul>
           <li>
             <a
