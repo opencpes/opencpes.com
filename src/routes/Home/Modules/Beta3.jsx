@@ -121,20 +121,15 @@ const Beta3 = props => {
                     How to Validate a Claim
                   </Typography>
                   <Typography className={classes.text}>
-                    Validating an OpenCPE claim is simple, in the OpenCPEs
-                    wallet where the claim was accepted you just open the claim
-                    up by tapping on it which shows a validation QR code.
-                  </Typography>
-                  <Typography className={classes.text}>
-                    Using another device with the OpenCPEs mobile app installed
-                    simply take a picture of a validation QR code with the
-                    camera app or QR code reader of your choice, this will
-                    prompt you to open the URL in the OpenCPEs mobile client.
-                  </Typography>
-                  <Typography className={classes.text}>
-                    Click the “Token is valid” and you’ll get a thumbs up if it
-                    finds it in the OCLs blockchain, and a thumbs down if it
-                    fails to find it.
+                    Currently, you can validate a claim using the
+                    <a href="https://demo-search.opencpes.com/">
+                      https://demo-search.opencpes.com/
+                    </a>{' '}
+                    web page, simply cut and paste the hash value in and it will
+                    confirm if that exists in the chain or not. This web page
+                    uses JavaScript and simply walks through the chain to find
+                    the value you’re searching for, you can easily download all
+                    the data and the JavaScript and run it locally if you want.
                   </Typography>
                 </Paper>
               </Grid>
