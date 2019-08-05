@@ -1,14 +1,20 @@
 import React from 'react';
 
+// @material-ui
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
+// html5 video
+import { DefaultPlayer as Video } from 'react-html5video';
+import 'react-html5video/dist/styles.css';
+
 // components
 //import { useStateValue } from "../../../contexts/state";
 
 // Assets
+import leaf from '../../../assets/img/leaf.png';
 
 /********************************************************************************
  * Some Styling
@@ -32,7 +38,10 @@ const useStyles = makeStyles(theme => ({
     border: '20px solid #7CCFDD',
     margin: '0px auto',
     display: 'block',
-    maxWidth: '100%'
+    maxWidth: '60%',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '100%'
+    }
   }
 }));
 
@@ -63,16 +72,22 @@ const Beta2 = props => {
               </Grid>
             </Grid>
 
-            <iframe
-              src="https://player.vimeo.com/video/243244233"
-              width="640"
-              height="360"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-              allowFullScreen
+            <Video
+              autoPlay={false}
+              loop={false}
+              muted={false}
+              controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
+              poster={leaf}
+              onCanPlayThrough={() => {
+                // Do stuff
+              }}
               className={classes.video}
-              title="Learn about OpenCPEs"
-            />
+            >
+              <source
+                src="http://blocks-blockchain-demo-opencpes-com.s3.amazonaws.com/video/BlackHatDemoII.mp4"
+                type="video/mp4"
+              />
+            </Video>
           </Container>
         </section>
       </div>
