@@ -121,7 +121,7 @@ const Beta = props => {
                         <Grid item xs={12} md={7}>
                           <Typography variant="body1" className={classes.text}>
                             Use the QR code to the left, or the button below to
-                            access the beta ¢entsiWallet.
+                            access the beta OpenCPEs Wallet.
                           </Typography>
                           <Typography variant="body1" className={classes.text}>
                             <i>
@@ -139,7 +139,7 @@ const Beta = props => {
                               }}
                               className={classes.button}
                             >
-                              Install the ¢entsiWallet
+                              Install the OpenCPEs Wallet
                             </Button>
                           </div>
                         </Grid>
