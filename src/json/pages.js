@@ -124,7 +124,7 @@ export const pagesJSON = [
     render: Codex,
     title: 'How we Protect Client Privacy',
     desc:
-      'In order to protect the client data from simple brute force attacks against the hash value the client provides we have the client system create a random value (a secret “nonce”) that is 1024 bits in length, and then take a 512 bit hash of the original data plus the secret nonce... ',
+      'In order to protect the client data from simple brute force attacks against the hash value the client provides, we have the client system create a random value (a secret “nonce”) that is 1024 bits in length, and then take a 512 bit hash of the original data plus the secret nonce... ',
     tech: true
   },
   {
@@ -135,7 +135,7 @@ export const pagesJSON = [
     render: Codex,
     title: 'How we Protect Our BlockChain',
     desc:
-      'in theory all client data sent to OpenCPEs is hashed with a large secret nonce and is effectively random data, random data is safe to write to a blockchain and make public, right?... ',
+      'in theory, all client data sent to OpenCPEs is hashed with a large secret nonce and is effectively random data, random data is safe to write to a blockchain and make public, right?... ',
     tech: true
   }
 ];

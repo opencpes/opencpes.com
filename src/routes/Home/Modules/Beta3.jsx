@@ -13,6 +13,7 @@ import Paper from '@material-ui/core/Paper';
 import b31 from '../../../assets/img/b31.png';
 import b32 from '../../../assets/img/b32.png';
 import b33 from '../../../assets/img/b33.png';
+import wallet from '../../../assets/img/OpenCPEs-Wallet.png';
 
 /********************************************************************************
  * Some Styling
@@ -41,6 +42,11 @@ const useStyles = makeStyles(theme => ({
     display: 'block',
     margin: '0px auto 40px auto',
     maxWidth: '100%'
+  },
+  walletImg: {
+    display: 'block',
+    maxWidth: '80%',
+    margin: '0px auto 10px auto'
   }
 }));
 
@@ -61,28 +67,24 @@ const Beta3 = props => {
                     className={classes.b3img}
                   />
                   <Typography variant="h3" className={classes.title}>
-                    How to Create a Claim
+                    How to create a Self Claim
                   </Typography>
                   <Typography className={classes.text}>
-                    Creating a claim with OpenCPEs is simple. You open the
-                    OpenCPEs mobile client in landscape mode and click the
-                    “Credit is issued”
+                    Simply open the OpenCPEs Wallet, enter the amount of the
+                    credit (e.g. “1”) and the description (e.g. “1 hour of CPE
+                    activity X”) and hit the plus key.
                   </Typography>
+                  <img
+                    src={wallet}
+                    alt="OpenCPEs Wallet"
+                    className={classes.walletImg}
+                  />
+                  <Typography className={classes.text}>That’s it.</Typography>
                   <Typography className={classes.text}>
-                    Enter an amount of ¢entsi, in this case we’ll use 0.1
-                    centsi, click ok and then enter a description of the
-                    activity. We’ll save this one as “blackhat OpenCPEs demo”
-                  </Typography>
-                  <Typography className={classes.text}>
-                    This generates a QR code that describes the Continuing
-                    Professional Education (CPE) Claim.
-                  </Typography>
-                  <Typography className={classes.text}>
-                    The person wanting to claim the CPE activity then simply
-                    takes a picture of the claim QR code with their mobile
-                    device using the camera app or QR code reader of their
-                    choosing, which will prompt the user to open the URL in the
-                    OpenCPEs mobile app and accept the claim if they want.
+                    We’ll be adding support so you can add the evidence you
+                    need, whether it’s a photo of the receipt for the book you
+                    read, a video of you doing the activity or a longer text
+                    description of what you did.
                   </Typography>
                 </Paper>
               </Grid>
@@ -90,23 +92,30 @@ const Beta3 = props => {
                 <Paper className={classes.paper}>
                   <img
                     src={b33}
-                    alt="How to Accept a Claim"
+                    alt="Accepting a one-time use OpenCPE Claim"
                     className={classes.b3img}
                   />
                   <Typography variant="h3" className={classes.title}>
-                    How to Accept a Claim
+                    Accepting a One-Time Use OpenCPE Claim
                   </Typography>
                   <Typography className={classes.text}>
-                    To accept a CPE claim you simply take a picture of a claim
-                    QR code with the camera app or QR code reader of your
-                    choice, this will prompt you to open the URL in the OpenCPEs
-                    mobile client if you want.
+                    The OpenCPEs Wallet uses a custom URL scheme to accept data
+                    for claims and register them, this allows simple text
+                    strings to be used to pass data which makes it much easier
+                    to secure and audit.
                   </Typography>
                   <Typography className={classes.text}>
-                    Opening the URL in the OpenCPEs mobile client results in it
-                    being accepted, and a registered claim QR code being
-                    generated which can then be used to validate if the token is
-                    properly registered or not.
+                    We currently have a webpage at{' '}
+                    <a href="https://demo.opencpes.com">
+                      https://demo.opencpes.com
+                    </a>{' '}
+                    that shows a one-time use QR code (click the blank page to
+                    generate it). Simply take a picture of it using your camera
+                    app (or QR code scanner of your choice) which will prompt
+                    you to open the URL in the OpenCPEs Wallet. Once opened it
+                    will accept and register the claim. The first OpenCPEs
+                    wallet to register the QR code “wins”, and no further
+                    instances of that QR code can be registered.
                   </Typography>
                 </Paper>
               </Grid>
@@ -121,7 +130,7 @@ const Beta3 = props => {
                     How to Validate a Claim
                   </Typography>
                   <Typography className={classes.text}>
-                    Currently, you can validate a claim using the
+                    Currently, you can validate a claim using the{' '}
                     <a href="https://demo-search.opencpes.com/">
                       https://demo-search.opencpes.com/
                     </a>{' '}
