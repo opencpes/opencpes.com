@@ -125,9 +125,9 @@ const Beta = props => {
                           </Typography>
                           <Typography variant="body1" className={classes.text}>
                             <i>
-                              *At this time only a Native iOS app us available.
-                              OpenCPEs will be releasing a native Android app
-                              later in 2019.
+                              *At this time only a Native iOS app is available.
+                              OpenCPEs will be releasing a native Android
+                              application later.
                             </i>
                           </Typography>
                           <div className={classes.buttonWrap}>

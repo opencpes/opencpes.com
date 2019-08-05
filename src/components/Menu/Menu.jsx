@@ -117,17 +117,17 @@ const Menu = props => {
             <Link to="/" className={`hide-small-logo-${inView}`}>
               <CentsiMark className={classes.centsiMark} />
             </Link>
-            <Link to="/getting-started" className={classes.menuBottomLink}>
+            <Link to="/codex/about-opencpes" className={classes.menuBottomLink}>
+              About OpenCPEs
+            </Link>
+            <Link
+              to="/codex/getting-started"
+              className={classes.menuBottomLink}
+            >
               Get Started
             </Link>
-            <Link to="/faq" className={classes.menuBottomLink}>
+            <Link to="/codex/faq" className={classes.menuBottomLink}>
               FAQ
-            </Link>
-            <Link to="/codex" className={classes.menuBottomLink}>
-              Codex
-            </Link>
-            <Link to="/codex/source-code" className={classes.menuBottomLink}>
-              Source Code
             </Link>
           </div>
 

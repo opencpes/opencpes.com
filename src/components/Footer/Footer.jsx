@@ -97,22 +97,29 @@ const Footer = props => {
                 </Link>
                 <br />
                 <Link
-                  to="/getting-started"
+                  to="/codex/about-opencpes"
+                  className={classes.footerBodyMenuLink}
+                >
+                  About OpenCPEs
+                </Link>
+                <br />
+                <Link
+                  to="/codex/getting-started"
                   className={classes.footerBodyMenuLink}
                 >
                   Get Started
-                </Link>
-                <br />
-                <Link to="/faq" className={classes.footerBodyMenuLink}>
-                  FAQ
                 </Link>
               </Typography>
             </Grid>
 
             <Grid item xs={6} sm={3} md={2}>
               <Typography className={classes.footerBodyMenu}>
-                <Link to="/codex" className={classes.footerBodyMenuLink}>
+                <Link to="/codex/codex" className={classes.footerBodyMenuLink}>
                   Codex
+                </Link>
+                <br />
+                <Link to="/codex/faq" className={classes.footerBodyMenuLink}>
+                  FAQ
                 </Link>
                 <br />
                 <Link

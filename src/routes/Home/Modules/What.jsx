@@ -68,11 +68,11 @@ const What = props => {
                 </Typography>
                 <Typography variant="body1" className={classes.text}>
                   OpenCPEs is a new Blockchain project from Cloud Security
-                  Alliance that allows you to create, share and validate your
-                  accomplishments and qualifications, publicly or privately
-                  without the need for any third parties to see your data.
-                  OpenCPEs will revolutionize how security professionals measure
-                  their professional development experiences.
+                  Alliance that allows you to create, share, confirm and
+                  validate your accomplishments and qualifications, publicly or
+                  privately without the need for any third parties to see your
+                  data. OpenCPEs will revolutionize how security professionals
+                  measure their professional development experiences.
                 </Typography>
                 <div className={classes.buttonWrap}>
                   <Button

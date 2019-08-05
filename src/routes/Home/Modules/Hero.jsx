@@ -21,10 +21,10 @@ const useStyles = makeStyles(theme => ({
     minHeight: '300px',
     padding: '100px 0',
     backgroundImage: `url(${herobeta})`,
-    backgroundPosition: '73% 50%',
+    backgroundPosition: '79% 50%',
     backgroundRepeat: 'no-repeat',
     [theme.breakpoints.down('md')]: {
-      backgroundPosition: '85% 50%'
+      backgroundPosition: '89% 50%'
     },
     [theme.breakpoints.down('sm')]: {
       backgroundImage: 'none'
@@ -32,6 +32,10 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     paddingBottom: '35px'
+  },
+  subTitle: {
+    fontSize: '17px',
+    lineHeight: '1.3em'
   }
 }));
 
@@ -51,19 +55,27 @@ const Hero = props => {
                 justify="center"
                 alignItems="center"
               >
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={5}>
                   <Typography variant="h1" className={classes.title}>
                     Transforming Knowledge into Currency
                   </Typography>
+                  <Typography className={classes.subTitle}>
+                    <b>Learn</b> - expand your Cybersecurity educational horizon{' '}
+                    <br />
+                    <b>Track</b> - put your educational credits in your wallet{' '}
+                    <br />
+                    <b>Get Rewarded</b> - enjoy the career benefits of verified
+                    expertise
+                  </Typography>
                   <Typography className={classes.text}>
                     With OpenCPEs, professionals ​are rewarded for real
-                    accomplishments.​ ​Any traditional or non-traditional
-                    learning experience can be tracked and credited. OpenCPEs
-                    makes the Cybersecurity industry bigger and better by
-                    enhancing its most important​ ​resource - People.
+                    accomplishments, both traditional or non-traditional.
+                    Because any learning experience can be tracked and credited,
+                    OpenCPEs makes the Cybersecurity industry bigger and better
+                    by enhancing its most important​ ​resource - People.
                   </Typography>
                 </Grid>
-                <Grid item xs={8} />
+                <Grid item xs={7} />
               </Grid>
             </Container>
           </section>

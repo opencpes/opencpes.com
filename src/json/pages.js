@@ -2,63 +2,73 @@ import DefaultPage from '../routes/DefaultPage';
 import Codex from '../routes/Codex';
 
 export const pagesJSON = [
-  {
+  /*{
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
-    type: 'page',
+    type: 'codex',
     slug: '/privacy-guarantees',
     md: process.env.REACT_APP_MD_SRC + 'pages/privacy-guarantees.md',
-    render: DefaultPage,
+    render: Codex,
     title: '',
     desc: '',
     tech: false
   },
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
-    type: 'page',
+    type: 'codex',
     slug: '/validating-opencpes',
     md: process.env.REACT_APP_MD_SRC + 'pages/validating-opencpes.md',
-    render: DefaultPage,
+    render: Codex,
     title: '',
+    desc: '',
+    tech: false
+  }, */
+  {
+    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    type: 'codex',
+    slug: '/codex/about-opencpes',
+    md: process.env.REACT_APP_MD_SRC + 'pages/about.md',
+    render: Codex,
+    title: 'About OpenCPEs',
     desc: '',
     tech: false
   },
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
-    type: 'page',
-    slug: '/getting-started',
+    type: 'codex',
+    slug: '/codex/getting-started',
     md: process.env.REACT_APP_MD_SRC + 'pages/getting-started.md',
-    render: DefaultPage,
-    title: '',
+    render: Codex,
+    title: 'Getting Started',
     desc: '',
     tech: false
   },
-  {
+  /*{
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
-    type: 'page',
+    type: 'codex',
     slug: '/cpe-providers',
     md: process.env.REACT_APP_MD_SRC + 'pages/cpe-providers.md',
-    render: DefaultPage,
+    render: Codex,
     title: '',
     desc: '',
     tech: false
   },
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
-    type: 'page',
+    type: 'codex',
     slug: '/certification-providers',
     md: process.env.REACT_APP_MD_SRC + 'pages/certification-providers.md',
-    render: DefaultPage,
+    render: Codex,
     title: '',
     desc: '',
     tech: false
-  },
+  }, */
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
-    type: 'page',
-    slug: '/faq',
+    type: 'codex',
+    slug: '/codex/faq',
     md: process.env.REACT_APP_MD_SRC + 'pages/faq.md',
-    render: DefaultPage,
-    title: '',
+    render: Codex,
+    title: 'FAQ',
     desc: '',
     tech: false
   },
@@ -73,7 +83,7 @@ export const pagesJSON = [
       'All the software needed to use OpenCPE is currently available, and is licensed under the GPLv3. Binary release builds of the software are also available...',
     tech: true
   },
-  {
+  /* {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
     type: 'codex',
     slug: '/codex/technical-details',
@@ -83,7 +93,7 @@ export const pagesJSON = [
     desc: '',
 
     tech: false
-  },
+  }, */
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
     type: 'codex',

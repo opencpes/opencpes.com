@@ -33,6 +33,10 @@ const useStyles = makeStyles(theme => ({
   },
   menuTitle: {
     padding: '30px 0 10px 10px '
+  },
+  button: {
+    width: '100%',
+    justifyContent: 'left'
   }
 }));
 
@@ -66,21 +70,24 @@ const Codex = props => {
   return (
     <>
       <Container maxWidth="lg" className={classes.defaultPageCon}>
-        <Grid container direction="row" alignItems="flex-start">
+        <Grid container direction="row" alignItems="flex-start" spacing={3}>
           <Grid item xs={12} md={3}>
             <Typography variant="h4" className={classes.menuTitle}>
               Codex Topics
             </Typography>
             {codexJSON ? (
               codexJSON.map(a => (
-                <Button
-                  className={classes.button}
-                  component={AdapterLink}
-                  to={a.slug}
-                  key={a.id}
-                >
-                  {a.title}
-                </Button>
+                <>
+                  <Button
+                    className={classes.button}
+                    component={AdapterLink}
+                    to={a.slug}
+                    key={a.id}
+                  >
+                    {a.title}
+                  </Button>
+                  <br />
+                </>
               ))
             ) : (
               <CircularProgress className={classes.progress} />

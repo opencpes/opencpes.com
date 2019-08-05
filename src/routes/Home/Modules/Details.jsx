@@ -61,11 +61,11 @@ const Details = props => {
                     About OpenCPEs
                   </Typography>
                   <Typography variant="body1" className={classes.text}>
-                    Create, share and validate your accomplishments and
-                    qualifications, publicly or privately via OpenCPEs without
-                    the need for any third parties to see your data. See what
-                    end-to-end privacy and control of your data looks like with
-                    OpenCPEs.
+                    OpenCPEs is a project from Cloud Security Alliance Labs,
+                    which is affiliated with the Cloud Security Alliance, The
+                    Cloud Security Alliance and Cloud Security Alliance Labs
+                    work together to create and build innovative security and
+                    privacy solutions for the future.
                   </Typography>
                 </div>
               </Grid>
@@ -77,12 +77,11 @@ const Details = props => {
                   </Typography>
                   <Typography variant="body1" className={classes.text}>
                     ¢entsi is not a cryptocurrency. ¢entsi is a pseudo
-                    cryptocurrency, it can be used to express and measure value,
-                    but unlike a currency it cannot be transferred or spent,
-                    once ¢entsi is entered into a users wallet it cannot leave.
-                    The main goal of ¢entsi is to provide an abstraction of time
-                    and value to make it easier for users to express their CPE
-                    history.
+                    cryptocurrency, it can be used to measure value but unlike a
+                    currency, it cannot be spent, once ¢entsi is entered into a
+                    users wallet it cannot leave. The main goal of ¢entsi is to
+                    provide an abstraction and make it easier for users to
+                    express the value of their CPE history.
                   </Typography>
                 </div>
               </Grid>
@@ -93,11 +92,14 @@ const Details = props => {
                     Harnessing Blockchain Technology
                   </Typography>
                   <Typography variant="body1" className={classes.text}>
-                    None of the existing Blockchains had the privacy
-                    capabilities we needed, so rather than add our layer on top
-                    of something complex we simply created a proof of concept
-                    chain that can be used to validate data and prove it’s
-                    veracity.
+                    None of the existing Blockchains had the privacy technology
+                    we needed, so rather than add another layer on top of
+                    something complex we created a proof of concept chain that
+                    can be used to validate data and prove it’s veracity. We
+                    also took care to ensure that our data and data processing
+                    is blockchain agnostic, let’s face it, the blockchain
+                    technology we have today will be eclipsed in a few years by
+                    much better technologies.
                   </Typography>
                 </div>
               </Grid>
@@ -108,10 +110,12 @@ const Details = props => {
                     Privacy by Default
                   </Typography>
                   <Typography variant="body1" className={classes.text}>
-                    Designed from the ground up with Secure Proofs (a
-                    combination of random secret data and NIST approved hashing)
-                    to be insanely private! We don’t store your data. We do not
-                    transfer your data to third parties.
+                    Designed from the ground up to be insanely private! We don’t
+                    need access to your camera, microphone or location. We don’t
+                    store client data directly in our OpenCPEs OCL blockchain.
+                    We do not transfer client data to third parties unless they
+                    already have it (for confirmation purposes). We give you
+                    explicit end-to-end control of your data.
                   </Typography>
                 </div>
               </Grid>
