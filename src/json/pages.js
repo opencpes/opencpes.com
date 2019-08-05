@@ -1,5 +1,5 @@
-import DefaultPage from '../routes/DefaultPage';
-import Codex from '../routes/Codex';
+import DefaultPage from '../routes/Default/DefaultPage';
+import Codex from '../routes/Codex/Codex';
 
 export const pagesJSON = [
   /*{

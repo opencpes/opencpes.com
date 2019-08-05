@@ -64,9 +64,9 @@ const Beta2 = props => {
                   Watch this Video and Create ¢entsi
                 </Typography>
                 <Typography className={classes.text}>
-                  Create your first ¢entsi by watching the video below (a
-                  pre-valued CPE) to learn about how to get started with
-                  OpenCPEs. Intructions for submiting your self-claim are
+                  Create your first ¢entsi by watching the video below (a​
+                  pre-valued CPE) to learn about how to get started with​
+                  OpenCPEs. Instructions for submitting your self-claim are
                   included in the video and detailed in the next section.
                 </Typography>
               </Grid>

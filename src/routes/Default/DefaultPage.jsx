@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 
 // Components
 
-import Loading from '../components/Loading';
+import Loading from '../../components/Loading';
 
 /********************************************************************************
  * Some Styling

@@ -7,7 +7,8 @@ import './App.css';
 
 // routes
 import Home from './routes/Home/Home';
-import Codex from './routes/Codex';
+import Codex from './routes/Codex/Codex';
+import RoadMap from './routes/RoadMap';
 
 // components
 import Footer from './components/Footer';
@@ -130,6 +131,12 @@ const App = props => {
               path="/codex"
               exact
               render={props => <Codex pagesJSON={pagesJSON} {...props} />}
+            />
+
+            <Route
+              path="/roadmap"
+              exact
+              render={props => <RoadMap {...props} />}
             />
 
             <Route
