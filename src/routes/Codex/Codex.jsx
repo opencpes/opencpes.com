@@ -15,8 +15,6 @@ import Typography from '@material-ui/core/Typography';
 
 // Components
 
-import Loading from '../../components/Loading';
-
 // TODO: active state on menu buttons
 // TODO: mobile dropdown for menu
 

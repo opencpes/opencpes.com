@@ -1,35 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8363ff83bab83cd53c481458ebd9ee52",
+    "revision": "aac1c9100f4d6e44a661f87b32366adf",
     "url": "/index.html"
   },
   {
-    "revision": "a60e99e1a78866d4a584",
+    "revision": "11414dd1fe5d72322318",
     "url": "/static/css/2.0699d904.chunk.css"
   },
   {
-    "revision": "5b9d1f8cb9d048323163",
-    "url": "/static/css/main.e7a26136.chunk.css"
+    "revision": "7714c72e3588e8e7d529",
+    "url": "/static/css/main.34e96f2a.chunk.css"
   },
   {
-    "revision": "a60e99e1a78866d4a584",
-    "url": "/static/js/2.4ac31a78.chunk.js"
+    "revision": "11414dd1fe5d72322318",
+    "url": "/static/js/2.2871f161.chunk.js"
   },
   {
-    "revision": "5b9d1f8cb9d048323163",
-    "url": "/static/js/main.a0b192bb.chunk.js"
+    "revision": "7714c72e3588e8e7d529",
+    "url": "/static/js/main.e00f6874.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "3be2b4ed041bc399f89fdbe38cc8554a",
-    "url": "/static/media/Centsi_mark.3be2b4ed.svg"
-  },
-  {
-    "revision": "32a7363bb0d1d3694ff1bbc1287ba3f7",
-    "url": "/static/media/bc.32a7363b.svg"
+    "revision": "b533bdd8988a46c03fa433eb866eecb7",
+    "url": "/static/media/centsi.b533bdd8.svg"
   },
   {
     "revision": "b05743dcb314ad0fc429328567174b4a",
