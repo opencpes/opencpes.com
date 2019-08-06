@@ -1,4 +1,4 @@
-# How we protect our BlockChain
+# How We Protect Our BlockChain
 
 So, in theory, all client data sent to the OpenCPEs OCL blockchain is hashed with a large secret nonce (1024 bits) and is effectively random data, random data is safe to write to a blockchain and make public, right? But what if the client submitted data isn’t random? What if a client manually submits a hash value that is actually their name or other Personally Identifiable Information (PII)? Or what if a client submits illegal data into the OpenCPEs blockchain?
 

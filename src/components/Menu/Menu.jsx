@@ -145,7 +145,7 @@ const Menu = props => {
                 if (props.location.pathname === '/') {
                   props.smoothScroll('Beta');
                 } else {
-                  props.history.push('/getting-started');
+                  props.history.push('/codex/getting-started');
                 }
               }
             }}

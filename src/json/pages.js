@@ -108,12 +108,12 @@ export const pagesJSON = [
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
     type: 'codex',
-    slug: '/codex/centsi-wallet-details',
+    slug: '/codex/wallet',
     md: process.env.REACT_APP_MD_SRC + 'codex/centsi-wallet.md',
     render: Codex,
-    title: '¢entsiWallet Details',
+    title: 'OpenCPEs Wallet Details',
     desc:
-      'The centsi wallet is a mobile client, currently available for Apple iOS in beta and in development for Google Android. If you want to be informed when it becomes available please signup to our ¢entsi announcement list',
+      'The OpenCPEs Wallet is a mobile client, currently available for Apple iOS in beta and in development for Google Android. If you want to be informed when it becomes available please signup to our ¢entsi announcement list',
     tech: true
   },
   {

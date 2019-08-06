@@ -1,4 +1,4 @@
-# How we protect your privacy in OpenCPEs
+# How We Protect Your Privacy in OpenCPEs
 
 Let’s say you want to register an OpenCPEs record that contains just your email address and your Social Security Number. If you create a document such as “johnsmith@example.org:740-00-1234” and hash it you would have a piece of data that is now very easy to brute force. Your email address is generally not that secret, and trying every hash value of 000-00-0000 through 999-99-9999 will take seconds on modern hardware. If you published this hash an attacker would be able to discover your SSN relatively quickly if they tried.
 
