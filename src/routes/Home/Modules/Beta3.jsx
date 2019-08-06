@@ -127,7 +127,7 @@ const Beta3 = props => {
                     className={classes.b3img}
                   />
                   <Typography variant="h3" className={classes.title}>
-                    How to Validate a Claim
+                    How to Validate an OpenCPEs Claim
                   </Typography>
                   <Typography className={classes.text}>
                     Currently, you can validate a claim using the{' '}

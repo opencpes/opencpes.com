@@ -53,7 +53,7 @@ const StayConnected = props => {
             >
               <Grid item xs={12} sm={9} md={7}>
                 <Typography variant="h2" className={classes.title}>
-                  Stay Connected
+                  Join the Beta Announcement List
                 </Typography>
                 {/*<Typography variant="body1" className={classes.text}>
                   OpenCPEs is committed to protecting your privacy and providing
