@@ -55,28 +55,32 @@ const StayConnected = props => {
                 <Typography variant="h2" className={classes.title}>
                   Stay Connected
                 </Typography>
-                <Typography variant="body1" className={classes.text}>
+                {/*<Typography variant="body1" className={classes.text}>
                   OpenCPEs is committed to protecting your privacy and providing
                   you with full control over any communications you choose to
                   receive from us. For this reason, we've created several Google
                   Groups allowing you to join us in the OpenCPEs revolution.
-                </Typography>
+                  </Typography>*/}
                 <Typography variant="body1" className={classes.text}>
-                  To receive <b>general announcements</b> about the OpenCPEs
-                  platform please join the announcements group by sending an
-                  email to:{' '}
+                  The OpenCPEs centsiWallet is a mobile client, currently
+                  available for Apple iOS in technical beta and in development
+                  for Google Android. If you want to be informed when it becomes
+                  generally available please signup to our announcement list at
+                  :{' '}
                   <a href="mailto:announcements+subscribe@opencpes.com">
                     announcements+subscribe@opencpes.com
-                  </a>
+                  </a>{' '}
+                  (a low volume announcement list for centsiWallet
+                  announcements).
                 </Typography>
-                <Typography variant="body1" className={classes.text}>
+                {/*<Typography variant="body1" className={classes.text}>
                   To get <b>technical notifications</b> about the OpenCPEs
                   platform please join the development group by sending an email
                   to:{' '}
                   <a href="mailto:devlist+subscribe@opencpes.com">
                     devlist+subscribe@opencpes.com
                   </a>
-                </Typography>
+                </Typography>*/}
               </Grid>
             </Grid>
           </Container>
