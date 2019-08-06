@@ -64,16 +64,6 @@ export const pagesJSON = [
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
     type: 'codex',
-    slug: '/codex/faq',
-    md: process.env.REACT_APP_MD_SRC + 'codex/faq.md',
-    render: Codex,
-    title: 'FAQ',
-    desc: '',
-    tech: false
-  },
-  {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
-    type: 'codex',
     slug: '/codex/glossary',
     md: process.env.REACT_APP_MD_SRC + 'codex/glossary.md',
     render: Codex,
