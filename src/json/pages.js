@@ -31,7 +31,7 @@ export const pagesJSON = [
     desc: '',
     tech: false
   },
-  {
+  /*{
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
     type: 'codex',
     slug: '/codex/getting-started',
@@ -41,7 +41,7 @@ export const pagesJSON = [
     desc: '',
     tech: false
   },
-  /*{
+  {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
     type: 'codex',
     slug: '/cpe-providers',

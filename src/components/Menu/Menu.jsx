@@ -95,9 +95,9 @@ const Menu = props => {
 
   useEffect(() => {
     if (props.location.pathname === '/') {
-      setActionButton('Join the Beta');
+      setActionButton('Signup for the Beta');
     } else {
-      setActionButton('Get Started');
+      setActionButton('Signup for the Beta');
     }
   }, [props.location.pathname]);
 
@@ -117,27 +117,21 @@ const Menu = props => {
           <div className={classes.menuBottomWrap}>
             {/* <Link to="/" className={`hide-small-logo-${inView}`}>
               <CentsiMark className={classes.centsiMark} />
-  </Link> */}
+            </Link> */}
             <Link to="/codex/about-opencpes" className={classes.menuBottomLink}>
               About OpenCPEs
-            </Link>
-            <Link
-              to="/codex/getting-started"
-              className={classes.menuBottomLink}
-            >
-              Get Started
             </Link>
             <Link to="/codex/faq" className={classes.menuBottomLink}>
               FAQ
             </Link>
-            <Link to="/roadmap" className={classes.menuBottomLink}>
+            {/*<Link to="/roadmap" className={classes.menuBottomLink}>
               Roadmap
-            </Link>
+            </Link>*/}
           </div>
 
           <Button
             variant="contained"
-            href="#Beta"
+            href="#StayConnected"
             onClick={e => {
               var isMobile = navigator.userAgent.match(
                 /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
@@ -147,9 +141,10 @@ const Menu = props => {
               } else {
                 e.preventDefault();
                 if (props.location.pathname === '/') {
-                  props.smoothScroll('Beta');
+                  props.smoothScroll('StayConnected');
                 } else {
-                  props.history.push('/codex/getting-started');
+                  props.smoothScroll('StayConnected');
+                  //props.history.push('/codex/getting-started');
                 }
               }
             }}

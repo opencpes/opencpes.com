@@ -4,6 +4,9 @@ import React, { useEffect } from 'react';
 // Material-ui
 import { makeStyles } from '@material-ui/core/styles';
 
+// Components
+import StayConnected from '../../components/StayConnected';
+
 // modules
 import HeroModule from './Modules/Hero';
 import DetailsModule from './Modules/Details';
@@ -12,6 +15,7 @@ import WhatModule from './Modules/What';
 import BetaModule from './Modules/Beta';
 import Beta2Module from './Modules/Beta2';
 import Beta3Module from './Modules/Beta3';
+import PreviewModule from './Modules/Preview';
 
 /********************************************************************************
  * Some Styling
@@ -34,7 +38,7 @@ const LandingPage = props => {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
-    var href = window.location.href.substring(
+    /* var href = window.location.href.substring(
       window.location.href.lastIndexOf('#') + 1
     );
     if (window.location.href.lastIndexOf('#') > 0)
@@ -45,19 +49,21 @@ const LandingPage = props => {
     return function cleanup() {
       // remove event listener
       window.removeEventListener('scroll', props.updateView);
-    };
+    }; */
   }, [props]);
 
   return (
     <>
       <HeroModule smoothScroll={props.smoothScroll} />
-      <WhatModule smoothScroll={props.smoothScroll} />
+      <StayConnected />
+      {/* <WhatModule smoothScroll={props.smoothScroll} /> */}
       <DetailsModule />
-      <div name="Beta" id="Beta" className="beta-section  cd-section">
+      {/* <div name="Beta" id="Beta" className="beta-section  cd-section">
         <BetaModule />
         <Beta2Module />
         <Beta3Module />
-      </div>
+      </div> */}
+      <PreviewModule />
       <TechModule pagesJSON={props.pagesJSON} />
 
       <nav id="cd-vertical-nav" className={classes.cdVerticalNav}>
@@ -85,6 +91,27 @@ const LandingPage = props => {
           </li>
           <li>
             <a
+              href="#StayConnected"
+              data-number="2"
+              className=""
+              onClick={e => {
+                var isMobile = navigator.userAgent.match(
+                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
+                );
+                if (isMobile) {
+                  // if we are on mobile device the scroll into view will be managed by the browser
+                } else {
+                  e.preventDefault();
+                  props.smoothScroll('StayConnected');
+                }
+              }}
+            >
+              <span className="cd-dot" />
+              <span className="cd-label">Connect</span>
+            </a>
+          </li>
+          {/*<li>
+            <a
               href="#What"
               data-number="2"
               className=""
@@ -103,7 +130,7 @@ const LandingPage = props => {
               <span className="cd-dot" />
               <span className="cd-label">About</span>
             </a>
-          </li>
+            </li>*/}
           <li>
             <a
               href="#Details"
@@ -125,7 +152,7 @@ const LandingPage = props => {
               <span className="cd-label">Details</span>
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               href="#Beta"
               data-number="4"
@@ -145,7 +172,7 @@ const LandingPage = props => {
               <span className="cd-dot" />
               <span className="cd-label">Beta</span>
             </a>
-          </li>
+            </li> */}
           <li>
             <a
               href="#Tech"
@@ -165,27 +192,6 @@ const LandingPage = props => {
             >
               <span className="cd-dot" />
               <span className="cd-label">Tech</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#StayConnected"
-              data-number="6"
-              className=""
-              onClick={e => {
-                var isMobile = navigator.userAgent.match(
-                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
-                );
-                if (isMobile) {
-                  // if we are on mobile device the scroll into view will be managed by the browser
-                } else {
-                  e.preventDefault();
-                  props.smoothScroll('StayConnected');
-                }
-              }}
-            >
-              <span className="cd-dot" />
-              <span className="cd-label">Connect</span>
             </a>
           </li>
         </ul>

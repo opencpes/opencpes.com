@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 // Components
 import StayConnected from '../StayConnected';
@@ -78,9 +78,20 @@ const Footer = props => {
   //const [{}, dispatch] = useStateValue(); // context api
   const classes = useStyles();
 
+  const [isHome, setIsHome] = React.useState(false);
+
+  useEffect(() => {
+    if (props.location.pathname === '/') {
+      setIsHome(true);
+    } else {
+      setIsHome(false);
+    }
+  }, [props.location.pathname]);
+
   return (
     <>
-      <StayConnected />
+      {isHome ? <></> : <StayConnected />}
+
       <div id="Footer" name="Footer" className={classes.root}>
         <Container maxWidth="lg">
           <Grid
@@ -102,22 +113,22 @@ const Footer = props => {
                 >
                   About OpenCPEs
                 </Link>
-                <br />
+                {/*<br />
                 <Link
                   to="/codex/getting-started"
                   className={classes.footerBodyMenuLink}
                 >
                   Get Started
-                </Link>
+                </Link>*/}
               </Typography>
             </Grid>
 
             <Grid item xs={6} sm={3} md={2}>
               <Typography className={classes.footerBodyMenu}>
-                <Link to="/codex/codex" className={classes.footerBodyMenuLink}>
+                {/*<Link to="/codex/codex" className={classes.footerBodyMenuLink}>
                   Codex
                 </Link>
-                <br />
+                <br />*/}
                 <Link to="/codex/faq" className={classes.footerBodyMenuLink}>
                   FAQ
                 </Link>
@@ -177,4 +188,4 @@ const Footer = props => {
   );
 };
 
-export default Footer;
+export default withRouter(Footer);

@@ -74,7 +74,7 @@ const What = props => {
                   data. OpenCPEs will revolutionize how security professionals
                   measure their professional development experiences.
                 </Typography>
-                <div className={classes.buttonWrap}>
+                {/*<div className={classes.buttonWrap}>
                   <Button
                     variant="contained"
                     href="#Beta"
@@ -93,7 +93,7 @@ const What = props => {
                   >
                     Join the Beta
                   </Button>
-                </div>
+                </div>*/}
               </Grid>
             </Grid>
           </Container>
