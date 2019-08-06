@@ -95,7 +95,7 @@ const Preview = props => {
               className={classes.video}
             >
               <source
-                src="http://blocks-blockchain-demo-opencpes-com.s3.amazonaws.com/video/BlackHatDemoII.mp4"
+                src="https://blocks-blockchain-demo-opencpes-com.s3.us-east-2.amazonaws.com/video/ChainInteractionDemo.mp4"
                 type="video/mp4"
               />
             </Video>

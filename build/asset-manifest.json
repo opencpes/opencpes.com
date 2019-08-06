@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.71852250.chunk.css",
-    "main.js": "/static/js/main.f32cb081.chunk.js",
-    "main.js.map": "/static/js/main.f32cb081.chunk.js.map",
+    "main.js": "/static/js/main.a0c60614.chunk.js",
+    "main.js.map": "/static/js/main.a0c60614.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
     "static/css/2.12b90c31.chunk.css": "/static/css/2.12b90c31.chunk.css",
     "static/js/2.2850faeb.chunk.js": "/static/js/2.2850faeb.chunk.js",
     "static/js/2.2850faeb.chunk.js.map": "/static/js/2.2850faeb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2fae062f15b4bde2f7b837a80de14ca6.js": "/precache-manifest.2fae062f15b4bde2f7b837a80de14ca6.js",
+    "precache-manifest.cb268c713549935996d4fb20ed3a9d21.js": "/precache-manifest.cb268c713549935996d4fb20ed3a9d21.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.12b90c31.chunk.css.map": "/static/css/2.12b90c31.chunk.css.map",
     "static/css/main.71852250.chunk.css.map": "/static/css/main.71852250.chunk.css.map",
@@ -18,7 +18,7 @@
     "static/media/d2.png": "/static/media/d2.a0eb1e5d.png",
     "static/media/d3.png": "/static/media/d3.ca9c7b25.png",
     "static/media/heroecpes.png": "/static/media/heroecpes.c3f68aef.png",
-    "static/media/leaf.png": "/static/media/leaf.fbdb4794.png",
+    "static/media/leaf.png": "/static/media/leaf.aeee3f05.png",
     "static/media/openCPEs_logo_22.84e524b6.svg": "/static/media/openCPEs_logo_22.84e524b6.svg",
     "static/media/qr.png": "/static/media/qr.08bd1cb7.png",
     "static/media/index.css": "/static/media/roboto-latin-900italic.bc833e72.woff"
