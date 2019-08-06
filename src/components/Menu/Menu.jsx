@@ -12,7 +12,7 @@ import Button from '@material-ui/core/Button';
 
 // Assets
 import { ReactComponent as CentsiMark } from '../../assets/img/Centsi_mark_2.svg';
-import { ReactComponent as OpenCPEsMark } from '../../assets/img/opencpes_final-08.svg';
+import { ReactComponent as OpenCPEsMark } from '../../assets/img/openCPEs_logo_22.svg';
 
 /********************************************************************************
  * Some Styling
@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme => ({
     zIndex: '999'
   },
   menuTop: {
-    background: '#fff'
+    background: '#fff',
+    padding: '12px 0 4px 0'
   },
   menuTopCon: {
     display: 'flex'
@@ -128,6 +129,9 @@ const Menu = props => {
             </Link>
             <Link to="/codex/faq" className={classes.menuBottomLink}>
               FAQ
+            </Link>
+            <Link to="/roadmap" className={classes.menuBottomLink}>
+              Roadmap
             </Link>
           </div>
 

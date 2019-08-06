@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d996f6c7e9cc05a5f138337d2c22893e",
+    "revision": "60645d7450785661563e5c1c2fc199b2",
     "url": "/index.html"
   },
   {
-    "revision": "54e6b1d3ffa4ccc1b088",
-    "url": "/static/css/2.0699d904.chunk.css"
+    "revision": "4f779b34c29fbfe5db31",
+    "url": "/static/css/2.d661ff34.chunk.css"
   },
   {
-    "revision": "ce25d849d9b2d2a88c4c",
+    "revision": "8c9ca0d774cc8806a740",
     "url": "/static/css/main.e7a26136.chunk.css"
   },
   {
-    "revision": "54e6b1d3ffa4ccc1b088",
-    "url": "/static/js/2.8604ef9e.chunk.js"
+    "revision": "4f779b34c29fbfe5db31",
+    "url": "/static/js/2.de1b3f5c.chunk.js"
   },
   {
-    "revision": "ce25d849d9b2d2a88c4c",
-    "url": "/static/js/main.55860d4f.chunk.js"
+    "revision": "8c9ca0d774cc8806a740",
+    "url": "/static/js/main.aa32d146.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fbdb479431d1a9ae8d64c1dbbb113a05",
     "url": "/static/media/leaf.fbdb4794.png"
+  },
+  {
+    "revision": "84e524b64a2569facfca352fcc75edca",
+    "url": "/static/media/openCPEs_logo_22.84e524b6.svg"
   },
   {
     "revision": "f5c3a49548fbd0b793e7df76098f4041",

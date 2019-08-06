@@ -11,7 +11,7 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
 // Assets
-import { ReactComponent as OpenCPEsMark } from '../../assets/img/opencpes_final-08.svg';
+import { ReactComponent as OpenCPEsMark } from '../../assets/img/openCPEs_logo_22.svg';
 
 /********************************************************************************
  * Some Styling
@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => ({
   },
   OpenCPEsMark: {
     maxWidth: '150px',
-    marginTop: '-8px'
+    marginTop: '3px'
   }
 }));
 

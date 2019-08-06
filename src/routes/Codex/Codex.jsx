@@ -101,7 +101,7 @@ const Codex = props => {
             {props.markDown ? (
               <ReactMarkdown source={markDown} />
             ) : (
-              props.history.push('/codex/client-privacy')
+              props.history.push('/codex/about-opencpes')
             )}
           </Grid>
         </Grid>

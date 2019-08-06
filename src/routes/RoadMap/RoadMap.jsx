@@ -12,10 +12,15 @@ import 'react-vertical-timeline-component/style.min.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-
-import WorkIcon from '@material-ui/icons/DeleteForever';
-import SchoolIcon from '@material-ui/icons/DeleteForever';
-import StarIcon from '@material-ui/icons/DeleteForever';
+import UpdateIcon from '@material-ui/icons/Update';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import WarningIcon from '@material-ui/icons/Warning';
+import CodeIcon from '@material-ui/icons/Code';
+import CompareArrowsIcon from '@material-ui/icons/CompareArrows';
+import LabelOffIcon from '@material-ui/icons/LabelOff';
+import QuestionAnswer from '@material-ui/icons/QuestionAnswer';
+import LockIcon from '@material-ui/icons/Lock';
+import ReceiptIcon from '@material-ui/icons/Receipt';
 
 // Components
 
@@ -27,14 +32,19 @@ import Loading from '../../components/Loading';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: '1140px',
-    margin: '30px auto',
-    padding: theme.spacing(3, 2)
+    background: '#e2f2ff'
   },
   defaultPageCon: {
     paddingTop: '60px',
     paddingBottom: '80px',
     background: '#e2f2ff'
+  },
+  title: {
+    paddingBottom: '15px'
+  },
+  text: {
+    paddingBottom: '10px',
+    margin: '0px!important'
   }
 }));
 
@@ -43,112 +53,167 @@ const RoadMap = props => {
 
   return (
     <>
-      <Container maxWidth="lg" className={classes.defaultPageCon}>
-        <VerticalTimeline>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2011 - present"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<WorkIcon />}
-          >
-            <Typography variant="h2" className={classes.title}>
-              Update Tokens for OpenCPE Records
-            </Typography>
-            <Typography className={classes.text}>
-              <i>Beta Client</i>
-            </Typography>
-            <Typography className={classes.text}>
-              The ability to update a claim, e.g. change your email address,
-              name and so on.
-            </Typography>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2010 - 2011"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<WorkIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">Art Director</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              San Francisco, CA
-            </h4>
-            <p>
-              Creative Direction, User Experience, Visual Design, SEO, Online
-              Marketing
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2008 - 2010"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<WorkIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">Web Designer</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Los Angeles, CA
-            </h4>
-            <p>User Experience, Visual Design</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2006 - 2008"
-            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-            icon={<WorkIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">Web Designer</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              San Francisco, CA
-            </h4>
-            <p>User Experience, Visual Design</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="April 2013"
-            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-            icon={<SchoolIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Content Marketing for Web, Mobile and Social Media
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Online Course
-            </h4>
-            <p>Strategy, Social Media</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="November 2012"
-            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-            icon={<SchoolIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Agile Development Scrum Master
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Certification
-            </h4>
-            <p>Creative Direction, User Experience, Visual Design</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="2002 - 2006"
-            iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-            icon={<SchoolIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Bachelor of Science in Interactive Digital Media Visual Imaging
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Bachelor Degree
-            </h4>
-            <p>Creative Direction, Visual Design</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-            icon={<StarIcon />}
-          />
-        </VerticalTimeline>
-      </Container>
+      <div className={classes.root}>
+        <Container maxWidth="lg" className={classes.defaultPageCon}>
+          <VerticalTimeline>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="In Development"
+              iconStyle={{ background: 'rgb(71, 79, 96)', color: '#fff' }}
+              icon={<UpdateIcon />}
+            >
+              <Typography variant="h2" className={classes.title}>
+                Updating, Combining and Modifying OpenCPEs
+              </Typography>
+              <Typography className={classes.text}>
+                We support update tokens, we want to allow people to update
+                individual records, combine them and create new sets of records
+                and more .
+              </Typography>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="In Development"
+              iconStyle={{ background: 'rgb(44, 179, 200)', color: '#fff' }}
+              icon={<AssignmentIcon />}
+            >
+              <Typography variant="h2" className={classes.title}>
+                Structured Claims and Data
+              </Typography>
+              <Typography className={classes.text}>
+                Currently, we do not have a data schema, we want to work with
+                the community on this.
+              </Typography>
+              <Typography className={classes.text}>
+                A catalog of common claims for both CPEs and certifications so
+                they can easily be created.
+              </Typography>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="Planned"
+              iconStyle={{ background: 'rgb(239, 54, 43)', color: '#fff' }}
+              icon={<WarningIcon />}
+            >
+              <Typography variant="h2" className={classes.title}>
+                Watermarking of Claims
+              </Typography>
+              <Typography className={classes.text}>
+                When sharing a claim with a third party, support watermarking,
+                so that if a third party leaks it you’ll be able to trace the
+                leak, this feature will also dovetail with structured claims and
+                data as well as data redaction and blinding.
+              </Typography>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="Planned"
+              iconStyle={{ background: 'rgb(155, 155, 155)', color: '#fff' }}
+              icon={<CodeIcon />}
+            >
+              <Typography variant="h2" className={classes.title}>
+                Release of Reference Libraries
+              </Typography>
+              <Typography className={classes.text}>
+                A Javascript reference library (currently in use in the demo
+                website).
+              </Typography>
+              <Typography className={classes.text}>
+                A SWIFT reference library (currently in use in the OpenCPEs
+                wallet client).
+              </Typography>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="Planned"
+              iconStyle={{ background: 'rgb(71, 79, 96)', color: '#fff' }}
+              icon={<CompareArrowsIcon />}
+            >
+              <Typography variant="h2" className={classes.title}>
+                Third-party Integration
+              </Typography>
+              <Typography className={classes.text}>
+                We will be creating integrations with CSA working groups, CSA
+                chapters, and CSA Research so people can easily claim CPEs.
+              </Typography>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="Planned"
+              iconStyle={{ background: 'rgb(44, 179, 200)', color: '#fff' }}
+              icon={<LabelOffIcon />}
+            >
+              <Typography variant="h2" className={classes.title}>
+                Data Redaction and Blinding
+              </Typography>
+              <Typography className={classes.text}>
+                We want to add the ability to selectively release data, e.g.
+                removing your name or date of birth from records before
+                releasing them to a third party, this feature also dovetails
+                tightly with structured claims and data and watermarking.
+              </Typography>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="Planned"
+              iconStyle={{ background: 'rgb(239, 54, 43)', color: '#fff' }}
+              icon={<QuestionAnswer />}
+            >
+              <Typography variant="h2" className={classes.title}>
+                Syntactic Queries and Answers
+              </Typography>
+              <Typography className={classes.text}>
+                We want to allow the client to answer questions such as “Is this
+                person a minor or an adult?” in a yes/no fashion without
+                releasing any information other than what is needed.
+              </Typography>
+              <Typography className={classes.text}>
+                Allowing more creative use of records to answer questions, e.g.
+                if I am asked “are you an adult (over 18)” I may not want to
+                release my date of birth, what if instead I could release a
+                record proving I was alive 18+ years ago (such as my MCSE for NT
+                4.0).
+              </Typography>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="Planned"
+              iconStyle={{ background: 'rgb(155, 155, 155)', color: '#fff' }}
+              icon={<LockIcon />}
+            >
+              <Typography variant="h2" className={classes.title}>
+                Queries With “Locked” Replies
+              </Typography>
+              <Typography className={classes.text}>
+                We want to allow clients to “lock” a reply to a query, for
+                example using a smart contract if the client data has leaked a
+                bond could be forfeited.
+              </Typography>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="Planned"
+              iconStyle={{ background: 'rgb(71, 79, 96)', color: '#fff' }}
+              icon={<ReceiptIcon />}
+            >
+              <Typography variant="h2" className={classes.title}>
+                Smart Contracts
+              </Typography>
+              <Typography className={classes.text}>
+                Smart contracts framework and languages to be supported.
+              </Typography>
+            </VerticalTimelineElement>
+          </VerticalTimeline>
+        </Container>
+      </div>
     </>
   );
 };
