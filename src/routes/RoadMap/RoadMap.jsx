@@ -1,5 +1,5 @@
 // react & router
-import React, { useEffect } from 'react';
+import React from 'react';
 
 // react-markdown
 import {
@@ -21,10 +21,6 @@ import LabelOffIcon from '@material-ui/icons/LabelOff';
 import QuestionAnswer from '@material-ui/icons/QuestionAnswer';
 import LockIcon from '@material-ui/icons/Lock';
 import ReceiptIcon from '@material-ui/icons/Receipt';
-
-// Components
-
-import Loading from '../../components/Loading';
 
 /********************************************************************************
  * Some Styling

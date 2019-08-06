@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "60645d7450785661563e5c1c2fc199b2",
+    "revision": "8363ff83bab83cd53c481458ebd9ee52",
     "url": "/index.html"
   },
   {
-    "revision": "4f779b34c29fbfe5db31",
-    "url": "/static/css/2.d661ff34.chunk.css"
+    "revision": "a60e99e1a78866d4a584",
+    "url": "/static/css/2.0699d904.chunk.css"
   },
   {
-    "revision": "8c9ca0d774cc8806a740",
+    "revision": "5b9d1f8cb9d048323163",
     "url": "/static/css/main.e7a26136.chunk.css"
   },
   {
-    "revision": "4f779b34c29fbfe5db31",
-    "url": "/static/js/2.de1b3f5c.chunk.js"
+    "revision": "a60e99e1a78866d4a584",
+    "url": "/static/js/2.4ac31a78.chunk.js"
   },
   {
-    "revision": "8c9ca0d774cc8806a740",
-    "url": "/static/js/main.aa32d146.chunk.js"
+    "revision": "5b9d1f8cb9d048323163",
+    "url": "/static/js/main.a0b192bb.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "96b6d3dbd3b6ea9c26b21f51f98438fa",
-    "url": "/static/media/Centsi_mark_2.96b6d3db.svg"
+    "revision": "3be2b4ed041bc399f89fdbe38cc8554a",
+    "url": "/static/media/Centsi_mark.3be2b4ed.svg"
   },
   {
     "revision": "32a7363bb0d1d3694ff1bbc1287ba3f7",
@@ -54,10 +54,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "84e524b64a2569facfca352fcc75edca",
     "url": "/static/media/openCPEs_logo_22.84e524b6.svg"
-  },
-  {
-    "revision": "f5c3a49548fbd0b793e7df76098f4041",
-    "url": "/static/media/opencpes_final-08.f5c3a495.svg"
   },
   {
     "revision": "08bd1cb77bb805b306d9de8ab180588f",

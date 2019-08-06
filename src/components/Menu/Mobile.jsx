@@ -17,7 +17,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 // Assets
-import { ReactComponent as OpenCPEsMark } from '../../assets/img/opencpes_final-08.svg';
+import { ReactComponent as OpenCPEsMark } from '../../assets/img/openCPEs_logo_22.svg';
 
 const drawerWidth = 240;
 
@@ -80,7 +80,8 @@ const useStyles = makeStyles(theme => ({
     flexGrow: '1'
   },
   OpenCPEsMark: {
-    maxWidth: '150px'
+    maxWidth: '150px',
+    marginBottom: '-8px'
   }
 }));
 

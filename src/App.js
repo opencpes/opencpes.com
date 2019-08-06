@@ -1,5 +1,5 @@
 // react & router
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
 // style
@@ -25,8 +25,6 @@ import { pagesJSON } from './json/pages';
 /********************************************************************************
  * Some Styling
  ******************************************************************************* */
-
-const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
   root: {

@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button';
 // components
 
 // Assets
-import { ReactComponent as CentsiMark } from '../../assets/img/Centsi_mark_2.svg';
+import { ReactComponent as CentsiMark } from '../../assets/img/Centsi_mark.svg';
 import { ReactComponent as OpenCPEsMark } from '../../assets/img/openCPEs_logo_22.svg';
 
 /********************************************************************************
@@ -115,9 +115,9 @@ const Menu = props => {
       <header className={`stickyrow ${classes.menuBottom}`}>
         <Container maxWidth="lg" className={classes.menuBottomCon}>
           <div className={classes.menuBottomWrap}>
-            <Link to="/" className={`hide-small-logo-${inView}`}>
+            {/*<Link to="/" className={`hide-small-logo-${inView}`}>
               <CentsiMark className={classes.centsiMark} />
-            </Link>
+              </Link> */}
             <Link to="/codex/about-opencpes" className={classes.menuBottomLink}>
               About OpenCPEs
             </Link>
