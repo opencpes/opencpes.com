@@ -121,8 +121,8 @@ const Menu = props => {
             <Link to="/codex/about-opencpes" className={classes.menuBottomLink}>
               About OpenCPEs
             </Link>
-            <Link to="/codex/faq" className={classes.menuBottomLink}>
-              FAQ
+            <Link to="/codex/contact" className={classes.menuBottomLink}>
+              Contact
             </Link>
             {/*<Link to="/roadmap" className={classes.menuBottomLink}>
               Roadmap

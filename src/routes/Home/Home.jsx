@@ -63,7 +63,7 @@ const LandingPage = props => {
         <Beta2Module />
         <Beta3Module />
       </div> */}
-      <PreviewModule />
+      {/* <PreviewModule /> */}
       <TechModule pagesJSON={props.pagesJSON} />
 
       <nav id="cd-vertical-nav" className={classes.cdVerticalNav}>
