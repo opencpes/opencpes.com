@@ -110,9 +110,9 @@ export const pagesJSON = [
     slug: '/codex/wallet',
     md: process.env.REACT_APP_MD_SRC + 'codex/centsi-wallet.md',
     render: Codex,
-    title: 'OpenCPEs Wallet Details',
+    title: 'OpenCPEs centsiWallet Details',
     desc:
-      'The OpenCPEs Wallet is a mobile client, currently available for Apple iOS in beta and in development for Google Android. If you want to be informed when it becomes available please signup to our ¢entsi announcement list',
+      'The OpenCPEs centsiWallet is a mobile client, currently available for Apple iOS in beta and in development for Google Android. If you want to be informed when it becomes available please signup to our ¢entsi announcement list',
     tech: true
   },
   {
@@ -134,7 +134,7 @@ export const pagesJSON = [
     render: Codex,
     title: 'How we Protect Our BlockChain',
     desc:
-      'in theory, all client data sent to OpenCPEs is hashed with a large secret nonce and is effectively random data, random data is safe to write to a blockchain and make public, right?... ',
+      'So in theory, all client data sent to the OpenCPEs OCL blockchain is hashed with a large secret nonce and is effectively random data, random data is safe to write to a blockchain and make public, right?...',
     tech: true
   }
 ];
