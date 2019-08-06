@@ -123,7 +123,7 @@ export const pagesJSON = [
     render: Codex,
     title: 'How we Protect Client Privacy',
     desc:
-      'In order to protect the client data from simple brute force attacks against the hash value the client provides, we have the client system create a random value (a secret “nonce”) that is 1024 bits in length, and then take a 512 bit hash of the original data plus the secret nonce... ',
+      'Protecting client data is critical. We do not directly store client data, instead, we only store a hashed value of the client provided data, after combining it was a large (2^1024) random nonce. After this hashed value is created we immediately destroy the client data that was submitted to us. We also have a secure client, the OpenCPEs centsiWallet in technical beta that takes additional steps to protect client data...',
     tech: true
   },
   {

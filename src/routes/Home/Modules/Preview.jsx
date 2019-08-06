@@ -23,7 +23,7 @@ import leaf from '../../../assets/img/leaf.png';
 const useStyles = makeStyles(theme => ({
   root: {
     background: '#e2f2ff',
-    paddingTop: '100px',
+    paddingTop: '90px',
     paddingBottom: '100px'
   },
   title: {
@@ -32,11 +32,14 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     textAlign: 'center',
-    paddingBottom: '45px'
+    paddingBottom: '25px',
+    '& a': {
+      color: '#54585A'
+    }
   },
   video: {
     border: '20px solid #7CCFDD',
-    margin: '0px auto',
+    margin: '20px auto 0 auto',
     display: 'block',
     maxWidth: '60%',
     [theme.breakpoints.down('sm')]: {
@@ -66,6 +69,16 @@ const Preview = props => {
                 <Typography className={classes.text}>
                   Watch as centsi are created using the OpenCPEs centsiWallet,
                   currently in technical beta for Apple iOS devices.
+                </Typography>
+                <Typography className={classes.text}>
+                  If you want to be informed when the OpenCPEs centsiWallet
+                  becomes generally available please signup to our announcement
+                  list at:{' '}
+                  <a href="mailto:announcements+subscribe@opencpes.com">
+                    announcements+subscribe@opencpes.com
+                  </a>{' '}
+                  (a low volume announcement list for centsiWallet
+                  announcements).
                 </Typography>
               </Grid>
             </Grid>

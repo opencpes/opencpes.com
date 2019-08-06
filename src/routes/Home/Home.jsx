@@ -175,6 +175,27 @@ const LandingPage = props => {
             </li> */}
           <li>
             <a
+              href="#Preview"
+              data-number="4"
+              className=""
+              onClick={e => {
+                var isMobile = navigator.userAgent.match(
+                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
+                );
+                if (isMobile) {
+                  // if we are on mobile device the scroll into view will be managed by the browser
+                } else {
+                  e.preventDefault();
+                  props.smoothScroll('Preview');
+                }
+              }}
+            >
+              <span className="cd-dot" />
+              <span className="cd-label">Preview</span>
+            </a>
+          </li>
+          <li>
+            <a
               href="#Tech"
               data-number="5"
               className=""
