@@ -84,9 +84,7 @@ const Codex = props => {
       <Container maxWidth="lg" className={classes.defaultPageCon}>
         <Grid container direction="row" alignItems="flex-start" spacing={3}>
           <Grid item xs={12} md={3}>
-            <Typography variant="h4" className={classes.menuTitle}>
-              Codex Topics
-            </Typography>
+            <Typography variant="h4" className={classes.menuTitle} />
             {codexJSON ? (
               codexJSON.map(a => (
                 <>

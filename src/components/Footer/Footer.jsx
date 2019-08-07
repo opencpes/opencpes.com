@@ -128,11 +128,11 @@ const Footer = props => {
                 {/*<Link to="/codex/codex" className={classes.footerBodyMenuLink}>
                   Codex
                 </Link>
-                <br />*/}
+                <br />
                 <Link to="/codex/faq" className={classes.footerBodyMenuLink}>
                   FAQ
                 </Link>
-                <br />
+                <br />*/}
                 <Link
                   to="/codex/source-code"
                   className={classes.footerBodyMenuLink}
@@ -170,7 +170,7 @@ const Footer = props => {
             </div>
 
             <Typography className={classes.footerBaseText}>
-              <Link to="/privacy-policy" className={classes.footerBaseMenuLink}>
+              {/*<Link to="/privacy-policy" className={classes.footerBaseMenuLink}>
                 Privacy Policy
               </Link>
               <Link
@@ -178,7 +178,7 @@ const Footer = props => {
                 className={classes.footerBaseMenuLink}
               >
                 Terms Of Service
-              </Link>
+</Link>*/}
               <span>&copy; 2019 OpenCPEs&trade;. All rights reserved.</span>
             </Typography>
           </div>
