@@ -31,6 +31,17 @@ export const pagesJSON = [
     desc: '',
     tech: false
   },
+  {
+    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    type: 'codex',
+    slug: '/codex/faq',
+    md: process.env.REACT_APP_MD_SRC + 'codex/faq.md',
+    render: Codex,
+    title: 'OpenCPEs and centsi FAQ',
+    desc:
+      'OpenCPEs is a special Blockchain project we are spinning out from Cloud Security Alliance, one of several Blockchain offerings we will be delivering to the cybersecurity industry....',
+    tech: false
+  },
   /*{
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
     type: 'codex',
@@ -78,7 +89,7 @@ export const pagesJSON = [
     slug: '/codex/source-code',
     md: process.env.REACT_APP_MD_SRC + 'codex/source-code.md',
     render: Codex,
-    title: 'OpenCPEs is Open Source Code and Open Data',
+    title: 'Open Source Code and Open Data',
     desc:
       'All the software needed to use OpenCPE is currently available, and is licensed under the GPLv3. Binary release builds of the software are also available...',
     tech: true
@@ -103,6 +114,28 @@ export const pagesJSON = [
     title: 'OpenCPEs centsiWallet Details',
     desc:
       'The OpenCPEs centsiWallet is a mobile client, currently available for Apple iOS in beta and in development for Google Android. If you want to be informed when it becomes available please signup to our ¢entsi announcement list',
+    tech: true
+  },
+  {
+    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    type: 'codex',
+    slug: '/codex/client-privacy',
+    md: process.env.REACT_APP_MD_SRC + 'codex/client-privacy.md',
+    render: Codex,
+    title: 'How we Protect Client Privacy',
+    desc:
+      'Protecting client data is critical. We do not directly store client data, instead, we only store a hashed value of the client provided data, after combining it was a large (2^1024) random nonce. After this hashed value is created we immediately destroy the client data that was submitted to us. We also have a secure client, the OpenCPEs centsiWallet in technical beta that takes additional steps to protect client data...',
+    tech: true
+  },
+  {
+    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    type: 'codex',
+    slug: '/codex/protect-our-blockchain',
+    md: process.env.REACT_APP_MD_SRC + 'codex/protect-our-blockchain.md',
+    render: Codex,
+    title: 'How we Protect Our BlockChain',
+    desc:
+      'So in theory, all client data sent to the OpenCPEs OCL blockchain is hashed with a large secret nonce and is effectively random data, random data is safe to write to a blockchain and make public, right?...',
     tech: true
   },
   {
@@ -136,28 +169,6 @@ export const pagesJSON = [
     title: 'FAQ - Centsi',
     desc:
       'centsi is the unit of measurement of the Continuing Professional Education (CPE) credits that will be stored in an individual’s OpenCPEs centsiWallet...',
-    tech: true
-  },
-  {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
-    type: 'codex',
-    slug: '/codex/client-privacy',
-    md: process.env.REACT_APP_MD_SRC + 'codex/client-privacy.md',
-    render: Codex,
-    title: 'How we Protect Client Privacy',
-    desc:
-      'Protecting client data is critical. We do not directly store client data, instead, we only store a hashed value of the client provided data, after combining it was a large (2^1024) random nonce. After this hashed value is created we immediately destroy the client data that was submitted to us. We also have a secure client, the OpenCPEs centsiWallet in technical beta that takes additional steps to protect client data...',
-    tech: true
-  },
-  {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
-    type: 'codex',
-    slug: '/codex/protect-our-blockchain',
-    md: process.env.REACT_APP_MD_SRC + 'codex/protect-our-blockchain.md',
-    render: Codex,
-    title: 'How we Protect Our BlockChain',
-    desc:
-      'So in theory, all client data sent to the OpenCPEs OCL blockchain is hashed with a large secret nonce and is effectively random data, random data is safe to write to a blockchain and make public, right?...',
     tech: true
   },
   {
