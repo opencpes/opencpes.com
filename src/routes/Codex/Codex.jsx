@@ -87,16 +87,15 @@ const Codex = props => {
             <Typography variant="h4" className={classes.menuTitle} />
             {codexJSON ? (
               codexJSON.map(a => (
-                <>
+                <React.Fragment key={a.id}>
                   <Button
                     className={classes.button}
                     component={AdapterLink}
                     to={a.slug}
-                    key={a.id}
                   >
                     {a.title}
                   </Button>
-                </>
+                </React.Fragment>
               ))
             ) : (
               <CircularProgress className={classes.progress} />
