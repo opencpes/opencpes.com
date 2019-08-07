@@ -146,10 +146,10 @@ const Mobile = props => {
           <ListItem button component={Link} to="/">
             <ListItemText primary="Home" />
           </ListItem>
-          <ListItem button component={Link} to="/about-opencpes">
+          <ListItem button component={Link} to="/codex/about-opencpes">
             <ListItemText primary="About OpenCPEs" />
           </ListItem>
-          <ListItem button component={Link} to="/contact">
+          <ListItem button component={Link} to="/codex/contact">
             <ListItemText primary="Contact" />
           </ListItem>
         </List>

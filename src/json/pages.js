@@ -29,7 +29,8 @@ export const pagesJSON = [
     render: Codex,
     title: 'About OpenCPEs',
     desc: '',
-    tech: false
+    tech: false,
+    codex: true
   },
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
@@ -40,7 +41,8 @@ export const pagesJSON = [
     title: 'OpenCPEs and centsi FAQ',
     desc:
       'OpenCPEs is a special Blockchain project we are spinning out from Cloud Security Alliance, one of several Blockchain offerings we will be delivering to the cybersecurity industry....',
-    tech: false
+    tech: false,
+    codex: true
   },
   /*{
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
@@ -81,7 +83,8 @@ export const pagesJSON = [
     title: 'OpenCPEs Glossary',
     desc:
       'Better understand the terms and language surrounding OpenCPEs by reviewing the OpenCPEs Glossary.',
-    tech: true
+    tech: true,
+    codex: true
   },
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
@@ -92,7 +95,8 @@ export const pagesJSON = [
     title: 'Open Source Code and Open Data',
     desc:
       'All the software needed to use OpenCPE is currently available, and is licensed under the GPLv3. Binary release builds of the software are also available...',
-    tech: true
+    tech: true,
+    codex: true
   },
   /* {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
@@ -114,7 +118,8 @@ export const pagesJSON = [
     title: 'OpenCPEs centsiWallet Details',
     desc:
       'The OpenCPEs centsiWallet is a mobile client, currently available for Apple iOS in beta and in development for Google Android. If you want to be informed when it becomes available please signup to our ¢entsi announcement list',
-    tech: true
+    tech: true,
+    codex: true
   },
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
@@ -125,7 +130,8 @@ export const pagesJSON = [
     title: 'How we Protect Client Privacy',
     desc:
       'Protecting client data is critical. We do not directly store client data, instead, we only store a hashed value of the client provided data, after combining it was a large (2^1024) random nonce. After this hashed value is created we immediately destroy the client data that was submitted to us. We also have a secure client, the OpenCPEs centsiWallet in technical beta that takes additional steps to protect client data...',
-    tech: true
+    tech: true,
+    codex: true
   },
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
@@ -136,7 +142,8 @@ export const pagesJSON = [
     title: 'How we Protect Our BlockChain',
     desc:
       'So in theory, all client data sent to the OpenCPEs OCL blockchain is hashed with a large secret nonce and is effectively random data, random data is safe to write to a blockchain and make public, right?...',
-    tech: true
+    tech: true,
+    codex: true
   },
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
@@ -147,7 +154,8 @@ export const pagesJSON = [
     title: 'FAQ - Blockchain Technology',
     desc:
       'We looked at a number of technology options for data storage and distribution, including (but not limited to) SQL databases (including graph databases), NoSQL (key value stores, document stores, object stores, etc.), file storage and distributed caching to name a few...',
-    tech: true
+    tech: true,
+    codex: false
   },
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
@@ -158,7 +166,8 @@ export const pagesJSON = [
     title: 'FAQ - Privacy & Safety',
     desc:
       'We have three main strategies we use to protect your privacy and your data: we don’t store your data, we do not transfer your data to third parties, and a planned future capability is to provide confirmation of records when they are submitted...',
-    tech: true
+    tech: true,
+    codex: false
   },
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
@@ -169,7 +178,8 @@ export const pagesJSON = [
     title: 'FAQ - Centsi',
     desc:
       'centsi is the unit of measurement of the Continuing Professional Education (CPE) credits that will be stored in an individual’s OpenCPEs centsiWallet...',
-    tech: true
+    tech: true,
+    codex: false
   },
   {
     id: Date.now() * Math.floor(Math.random() * 100 + 1),
@@ -179,6 +189,7 @@ export const pagesJSON = [
     render: Codex,
     title: 'Contact OpenCPEs',
     desc: '',
-    tech: false
+    tech: false,
+    codex: true
   }
 ];

@@ -64,7 +64,7 @@ const Codex = props => {
 
   useEffect(() => {
     let codexArray = props.pagesJSON.filter(function(page) {
-      return page.type === 'codex';
+      return page.codex === true;
     });
     setCodexJSON(codexArray);
   }, [props.pagesJSON]);
