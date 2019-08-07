@@ -3,6 +3,9 @@ import { useInView } from 'react-intersection-observer';
 
 import { Link, withRouter } from 'react-router-dom';
 
+// Detection
+import { isMobile, isSafari } from 'react-device-detect';
+
 // Material-ui
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -11,7 +14,7 @@ import Button from '@material-ui/core/Button';
 // components
 
 // Assets
-import { ReactComponent as CentsiMark } from '../../assets/img/centsi.svg';
+//import { ReactComponent as CentsiMark } from '../../assets/img/centsi.svg';
 import { ReactComponent as OpenCPEsMark } from '../../assets/img/openCPEs_logo_22.svg';
 
 /********************************************************************************
@@ -136,24 +139,23 @@ const Menu = props => {
             variant="contained"
             href="#StayConnected"
             onClick={e => {
-              var isMobile = navigator.userAgent.match(
-                /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
-              );
-              if (isMobile) {
+              if (isMobile || isSafari) {
+                // TODO: fix this safari issue.
                 // if we are on mobile device the scroll into view will be managed by the browser
               } else {
                 e.preventDefault();
-                if (props.location.pathname === '/') {
-                  props.smoothScroll('StayConnected');
-                } else {
-                  props.smoothScroll('StayConnected');
-                  //props.history.push('/codex/getting-started');
-                }
+                //if (props.location.pathname === '/') {
+                props.smoothScroll('StayConnected');
+                //} else {
+                //props.smoothScroll('StayConnected');
+                //props.history.push('/codex/getting-started');
+                //}
               }
             }}
             className={classes.menuBottomButton}
           >
-            {actionButton}
+            {/** frags required so as not to have a missing child error */}
+            <>{actionButton}</>
           </Button>
         </Container>
       </header>
