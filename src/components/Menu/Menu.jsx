@@ -78,14 +78,14 @@ const useStyles = makeStyles(theme => ({
   },
   menuBottomButton: {
     color: '#fff',
-    background: '#23B3C8',
+    background: '#e64c39',
     '&:hover': {
       cursor: 'pointer',
-      background: '#474E5E'
+      background: '#b13728'
     }
   },
   OpenCPEsMark: {
-    maxWidth: '180px'
+    maxWidth: '200px'
   }
 }));
 
@@ -101,9 +101,9 @@ const Menu = props => {
 
   useEffect(() => {
     if (props.location.pathname === '/') {
-      setActionButton('Signup for the Beta');
+      setActionButton('Sign Up for Beta');
     } else {
-      setActionButton('Signup for the Beta');
+      setActionButton('Sign Up for Beta');
     }
   }, [props.location.pathname]);
 

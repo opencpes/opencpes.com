@@ -66,7 +66,7 @@ const LandingPage = props => {
       {/* <PreviewModule /> */}
       <TechModule pagesJSON={props.pagesJSON} />
 
-      <nav id="cd-vertical-nav" className={classes.cdVerticalNav}>
+      {/* <nav id="cd-vertical-nav" className={classes.cdVerticalNav}>
         <ul>
           <li>
             <a
@@ -110,7 +110,7 @@ const LandingPage = props => {
               <span className="cd-label">Connect</span>
             </a>
           </li>
-          {/*<li>
+          <li>
             <a
               href="#What"
               data-number="2"
@@ -130,7 +130,7 @@ const LandingPage = props => {
               <span className="cd-dot" />
               <span className="cd-label">About</span>
             </a>
-            </li>*/}
+            </li>
           <li>
             <a
               href="#Details"
@@ -152,7 +152,7 @@ const LandingPage = props => {
               <span className="cd-label">Details</span>
             </a>
           </li>
-          {/* <li>
+          <li>
             <a
               href="#Beta"
               data-number="4"
@@ -172,7 +172,7 @@ const LandingPage = props => {
               <span className="cd-dot" />
               <span className="cd-label">Beta</span>
             </a>
-            </li> */}
+            </li> 
           <li>
             <a
               href="#Preview"
@@ -216,7 +216,7 @@ const LandingPage = props => {
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </>
   );
 };

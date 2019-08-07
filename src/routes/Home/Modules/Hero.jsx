@@ -31,11 +31,16 @@ const useStyles = makeStyles(theme => ({
     }
   },
   title: {
-    paddingBottom: '35px'
+    paddingBottom: '30px'
   },
   subTitle: {
     fontSize: '17px',
-    lineHeight: '1.3em'
+    lineHeight: '1.6em',
+    color: '#74797b',
+    paddingBottom: '25px'
+  },
+  subTitleBs: {
+    color: '#059AAF'
   }
 }));
 
@@ -60,19 +65,23 @@ const Hero = props => {
                     Transforming Knowledge into Currency
                   </Typography>
                   <Typography className={classes.subTitle}>
-                    <b>Learn</b> - expand your Cybersecurity educational horizon{' '}
-                    <br />
-                    <b>Track</b> - put your educational credits in your wallet{' '}
-                    <br />
-                    <b>Get Rewarded</b> - enjoy the career benefits of verified
-                    expertise
+                    <i>
+                      <b className={classes.subTitleBs}>Learn:</b> Expand your
+                      cybersecurity educational horizon
+                      <br />
+                      <b className={classes.subTitleBs}>Track:</b> Put your
+                      educational credits in your wallet
+                      <br />
+                      <b className={classes.subTitleBs}>Get Rewarded:</b> Enjoy
+                      the career benefits of verified expertise
+                    </i>
                   </Typography>
                   <Typography className={classes.text}>
                     With OpenCPEs, professionals ​are rewarded for real
                     accomplishments, both traditional or non-traditional.
                     Because any learning experience can be tracked and credited,
-                    OpenCPEs makes the Cybersecurity industry bigger and better
-                    by enhancing its most important​ ​resource - People.
+                    OpenCPEs makes the cybersecurity industry bigger and better
+                    by enhancing its most important​ ​resource - people.
                   </Typography>
                 </Grid>
                 <Grid item xs={7} />

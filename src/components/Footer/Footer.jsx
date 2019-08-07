@@ -41,6 +41,7 @@ const useStyles = makeStyles(theme => ({
   address: {
     fontSize: '16px',
     lineHeight: '1.7',
+    textAlign: 'right',
     '& a': {
       color: '#54585A'
     }
@@ -64,7 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
   footerBaseText: {
     '& span': {
-      fontWeight: '700',
+      fontWeight: '400',
       paddingLeft: '15px'
     }
   },
@@ -142,7 +143,7 @@ const Footer = props => {
               </Typography>
             </Grid>
             <Grid item xs={false} sm={false} md={4} />
-            <Grid item xs={6} sm={3} md={2}>
+            <Grid item xs={6} sm={3} md={4}>
               <Typography className={classes.address}>
                 <b>CONTACT US</b> <br />
                 {/*  CPE Corporate Office

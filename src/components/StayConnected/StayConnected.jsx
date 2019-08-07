@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     color: '#fff',
-    textAlign: 'justify',
+    textAlign: 'center',
     '& a': {
       color: '#fff'
     }
@@ -65,13 +65,12 @@ const StayConnected = props => {
                   The OpenCPEs centsiWallet is a mobile client, currently
                   available for Apple iOS in technical beta and in development
                   for Google Android. If you want to be informed when it becomes
-                  generally available please signup to our announcement list at
-                  :{' '}
+                  generally available, please sign up to our announcement list
+                  at{' '}
                   <a href="mailto:announcements+subscribe@opencpes.com">
                     announcements+subscribe@opencpes.com
                   </a>{' '}
-                  (a low volume announcement list for centsiWallet
-                  announcements).
+                  (a low volume list for centsiWallet announcements).
                 </Typography>
                 {/*<Typography variant="body1" className={classes.text}>
                   To get <b>technical notifications</b> about the OpenCPEs

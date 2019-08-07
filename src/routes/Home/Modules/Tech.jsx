@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     color: '#fff',
-    textAlign: 'justify',
+    textAlign: 'center',
     '& a': {
       color: '#fff'
     },
@@ -127,7 +127,7 @@ const Tech = props => {
                     Documents &amp; Articles about OpenCPEs and Centsi
                   </Typography>
                   <Typography variant="body1" className={classes.text}>
-                    The OpenCPEs platform is rapidly evolving and we're
+                    The OpenCPEs platform is rapidly evolving, and we're
                     committed to providing maximum transparency through quality
                     documentation. Below are a collection of articles we think
                     you'll find particularly interesting, but please find a full
