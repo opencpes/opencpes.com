@@ -34,6 +34,9 @@ const useStyles = makeStyles(theme => ({
   logoWrap: {
     flexGrow: '1'
   },
+  logoLink: {
+    textDecoration: 'none'
+  },
   menuBottom: {
     position: '-webkit-sticky',
     position: 'sticky',
@@ -106,7 +109,7 @@ const Menu = props => {
       <div className={classes.menuTop} ref={ref}>
         <Container maxWidth="lg" className={classes.menuTopCon}>
           <div className={classes.logoWrap}>
-            <Link to="/">
+            <Link to="/" className={classes.logoLink}>
               <OpenCPEsMark className={classes.OpenCPEsMark} />
             </Link>
           </div>
