@@ -2,6 +2,9 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+// Detection
+import { isMobile, isSafari } from 'react-device-detect';
+
 // react-markdown
 import ReactMarkdown from 'react-markdown/with-html';
 
@@ -12,11 +15,10 @@ import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
-import InputLabel from '@material-ui/core/InputLabel';
+import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+import MenuIcon from '@material-ui/icons/Menu';
+import Hidden from '@material-ui/core/Hidden';
 
 // Components
 
@@ -49,6 +51,13 @@ const useStyles = makeStyles(theme => ({
       justifyContent: 'center',
       display: 'inline'
     }
+  },
+  mobileMenu: {
+    margin: '20px auto 0 auto',
+    width: '100%'
+  },
+  mobileMenuIcon: {
+    marginLeft: '30px'
   }
 }));
 
@@ -61,6 +70,17 @@ const Codex = props => {
 
   const [codexJSON, setCodexJSON] = React.useState(null);
   const [markDown, setMarkDown] = React.useState(null);
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  function handleClick(event) {
+    setAnchorEl(event.currentTarget);
+  }
+
+  function handleClose() {
+    setAnchorEl(null);
+  }
+  console.log(props);
 
   useEffect(() => {
     let codexArray = props.pagesJSON.filter(function(page) {
@@ -77,29 +97,58 @@ const Codex = props => {
       });
   }, [props.markDown]);
 
-  console.log(props.markDown);
-
   return (
     <>
       <Container maxWidth="lg" className={classes.defaultPageCon}>
         <Grid container direction="row" alignItems="flex-start" spacing={3}>
           <Grid item xs={12} md={3}>
-            <Typography variant="h4" className={classes.menuTitle} />
-            {codexJSON ? (
-              codexJSON.map(a => (
-                <React.Fragment key={a.id}>
-                  <Button
-                    className={classes.button}
-                    component={AdapterLink}
-                    to={a.slug}
-                  >
-                    {a.title}
-                  </Button>
-                </React.Fragment>
-              ))
-            ) : (
-              <CircularProgress className={classes.progress} />
-            )}
+            <Hidden mdUp>
+              <Button
+                aria-controls="simple-menu"
+                aria-haspopup="true"
+                onClick={handleClick}
+                variant="contained"
+                className={classes.mobileMenu}
+              >
+                {props.pageTitle}{' '}
+                <MenuIcon className={classes.mobileMenuIcon} />
+              </Button>
+              <Menu
+                id="simple-menu"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                {codexJSON ? (
+                  codexJSON.map(a => (
+                    <MenuItem key={a.id} component={Link} to={a.slug}>
+                      {a.title}
+                    </MenuItem>
+                  ))
+                ) : (
+                  <CircularProgress className={classes.progress} />
+                )}
+              </Menu>
+            </Hidden>
+            <Hidden smDown>
+              <Typography variant="h4" className={classes.menuTitle} />
+              {codexJSON ? (
+                codexJSON.map(a => (
+                  <React.Fragment key={a.id}>
+                    <Button
+                      className={classes.button}
+                      component={AdapterLink}
+                      to={a.slug}
+                    >
+                      {a.title}
+                    </Button>
+                  </React.Fragment>
+                ))
+              ) : (
+                <CircularProgress className={classes.progress} />
+              )}
+            </Hidden>
           </Grid>
 
           <Grid item xs={12} md={9}>

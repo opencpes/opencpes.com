@@ -22,7 +22,7 @@ export const pagesJSON = [
     tech: false
   }, */
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/about-opencpes',
     md: process.env.REACT_APP_MD_SRC + 'codex/about.md',
@@ -33,7 +33,7 @@ export const pagesJSON = [
     codex: true
   },
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/faq',
     md: process.env.REACT_APP_MD_SRC + 'codex/faq.md',
@@ -45,7 +45,7 @@ export const pagesJSON = [
     codex: true
   },
   /*{
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/getting-started',
     md: process.env.REACT_APP_MD_SRC + 'codex/getting-started.md',
@@ -55,7 +55,7 @@ export const pagesJSON = [
     tech: false
   },
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/cpe-providers',
     md: process.env.REACT_APP_MD_SRC + 'codex/cpe-providers.md',
@@ -65,7 +65,7 @@ export const pagesJSON = [
     tech: false
   },
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/certification-providers',
     md: process.env.REACT_APP_MD_SRC + 'codex/certification-providers.md',
@@ -75,7 +75,7 @@ export const pagesJSON = [
     tech: false
   }, */
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/glossary',
     md: process.env.REACT_APP_MD_SRC + 'codex/glossary.md',
@@ -87,7 +87,7 @@ export const pagesJSON = [
     codex: true
   },
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/source-code',
     md: process.env.REACT_APP_MD_SRC + 'codex/source-code.md',
@@ -99,7 +99,7 @@ export const pagesJSON = [
     codex: true
   },
   /* {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/technical-details',
     md: process.env.REACT_APP_MD_SRC + 'codex/technical-details.md',
@@ -110,7 +110,7 @@ export const pagesJSON = [
     tech: false
   }, */
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/wallet',
     md: process.env.REACT_APP_MD_SRC + 'codex/centsi-wallet.md',
@@ -122,7 +122,7 @@ export const pagesJSON = [
     codex: true
   },
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/client-privacy',
     md: process.env.REACT_APP_MD_SRC + 'codex/client-privacy.md',
@@ -134,7 +134,7 @@ export const pagesJSON = [
     codex: true
   },
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/protect-our-blockchain',
     md: process.env.REACT_APP_MD_SRC + 'codex/protect-our-blockchain.md',
@@ -146,7 +146,7 @@ export const pagesJSON = [
     codex: true
   },
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/faq-blockchain-technology',
     md: process.env.REACT_APP_MD_SRC + 'codex/blockchain-tech.md',
@@ -158,7 +158,7 @@ export const pagesJSON = [
     codex: false
   },
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/faq-privacy-safety',
     md: process.env.REACT_APP_MD_SRC + 'codex/privacy-safety.md',
@@ -170,7 +170,7 @@ export const pagesJSON = [
     codex: false
   },
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/faq-centsi',
     md: process.env.REACT_APP_MD_SRC + 'codex/centsi.md',
@@ -182,7 +182,7 @@ export const pagesJSON = [
     codex: false
   },
   {
-    id: Date.now() * Math.floor(Math.random() * 100 + 1),
+    id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/contact',
     md: process.env.REACT_APP_MD_SRC + 'codex/contact.md',

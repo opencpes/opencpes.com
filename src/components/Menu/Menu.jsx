@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
 
 import { Link, withRouter } from 'react-router-dom';
 
@@ -94,11 +93,6 @@ const Menu = props => {
 
   const [actionButton, setActionButton] = useState(null);
 
-  const [ref, inView, entry] = useInView({
-    /* Optional options */
-    threshold: 0
-  });
-
   useEffect(() => {
     if (props.location.pathname === '/') {
       setActionButton('Sign Up for Beta');
@@ -109,7 +103,7 @@ const Menu = props => {
 
   return (
     <>
-      <div className={classes.menuTop} ref={ref}>
+      <div className={classes.menuTop}>
         <Container maxWidth="lg" className={classes.menuTopCon}>
           <div className={classes.logoWrap}>
             <Link to="/" className={classes.logoLink}>
@@ -121,9 +115,6 @@ const Menu = props => {
       <header className={`stickyrow ${classes.menuBottom}`}>
         <Container maxWidth="lg" className={classes.menuBottomCon}>
           <div className={classes.menuBottomWrap}>
-            {/* <Link to="/" className={`hide-small-logo-${inView}`}>
-              <CentsiMark className={classes.centsiMark} />
-            </Link> */}
             <Link to="/codex/about-opencpes" className={classes.menuBottomLink}>
               About OpenCPEs
             </Link>
@@ -140,8 +131,9 @@ const Menu = props => {
             href="#StayConnected"
             onClick={e => {
               if (isMobile || isSafari) {
-                // TODO: fix this safari issue.
-                // if we are on mobile device the scroll into view will be managed by the browser
+                e.preventDefault();
+                // if on safari or a mobile device, push directly to /codex/contact
+                props.history.push('/codex/contact');
               } else {
                 e.preventDefault();
                 //if (props.location.pathname === '/') {

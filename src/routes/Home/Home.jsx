@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 
 // Material-ui
-import { makeStyles } from '@material-ui/core/styles';
+//import { makeStyles } from '@material-ui/core/styles';
 
 // Components
 import StayConnected from '../../components/StayConnected';
@@ -11,17 +11,17 @@ import StayConnected from '../../components/StayConnected';
 import HeroModule from './Modules/Hero';
 import DetailsModule from './Modules/Details';
 import TechModule from './Modules/Tech';
-import WhatModule from './Modules/What';
-import BetaModule from './Modules/Beta';
-import Beta2Module from './Modules/Beta2';
-import Beta3Module from './Modules/Beta3';
-import PreviewModule from './Modules/Preview';
+//import WhatModule from './Modules/What';
+//import BetaModule from './Modules/Beta';
+//import Beta2Module from './Modules/Beta2';
+//import Beta3Module from './Modules/Beta3';
+//import PreviewModule from './Modules/Preview';
 
 /********************************************************************************
  * Some Styling
  ******************************************************************************* */
 
-const useStyles = makeStyles(theme => ({
+/*const useStyles = makeStyles(theme => ({
   root: {
     //background: '#474E5E'
   },
@@ -30,10 +30,10 @@ const useStyles = makeStyles(theme => ({
       display: 'none'
     }
   }
-}));
+})); */
 
 const LandingPage = props => {
-  const classes = useStyles();
+  //const classes = useStyles();
 
   useEffect(() => {
     window.scrollTo(0, 0);

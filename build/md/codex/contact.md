@@ -8,6 +8,8 @@ If you are interested in a technology preview or learning about partnering with 
 
 OpenCPEs is committed to protecting your privacy and providing you with full control over any communications you choose to receive from us. For this reason, we've created several Google Groups allowing you to join us in the OpenCPEs revolution.
 
+**Beta Announcement List:** The OpenCPEs centsiWallet is a mobile client, currently available for Apple iOS in technical beta and in development for Google Android. If you want to be informed when it becomes generally available, please sign up to our announcement list at [announcements+subscribe@opencpes.com](mailto:announcements+subscribe@opencpes.com)
+
 **General Announcements:** To receive general announcements about the OpenCPEs platform, please join the announcements group by sending an email to [announcements+subscribe@opencpes.com](mailto:announcements+subscribe@opencpes.com)
 
 **Technical & Software Announcements:** To get technical notifications about the OpenCPEs platform, please join the development group by sending an email to [devlist+subscribe@opencpes.com](devlist+subscribe@opencpes.com)

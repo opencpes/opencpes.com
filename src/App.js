@@ -50,6 +50,7 @@ const App = props => {
     return (-c / 2) * (t * (t - 2) - 1) + b;
   };
 
+  /*
   const updateView = () => {
     var contentSections = document.getElementsByClassName('cd-section');
     var navigationItems = document
@@ -72,7 +73,7 @@ const App = props => {
         navigationItems[activeSection].classList.remove('is-selected');
       }
     }
-  };
+  }; */
 
   const smoothScroll = target => {
     var targetScroll = document.getElementById(target);
@@ -86,6 +87,7 @@ const App = props => {
       increment = 20;
 
     var animateScroll = function() {
+      console.log('yerp');
       currentTime += increment;
       var val = easeInOutQuad(currentTime, start, change, duration);
       element.scrollTop = val;
@@ -118,6 +120,7 @@ const App = props => {
                 render={props => (
                   <page.render
                     markDown={page.md}
+                    pageTitle={page.title}
                     pagesJSON={pagesJSON}
                     {...props}
                   />
@@ -142,7 +145,7 @@ const App = props => {
               exact
               render={props => (
                 <Home
-                  updateView={updateView}
+                  //updateView={updateView}
                   smoothScroll={smoothScroll}
                   pagesJSON={pagesJSON}
                   {...props}
