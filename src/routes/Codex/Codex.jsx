@@ -54,7 +54,14 @@ const useStyles = makeStyles(theme => ({
   },
   mobileMenu: {
     margin: '20px auto 0 auto',
-    width: '100%'
+    background: '#23B3C8',
+    color: '#fff',
+    width: '100%',
+    boxShadow: 'none',
+    '&:hover': {
+      cursor: 'pointer',
+      background: '#474E5E'
+    }
   },
   mobileMenuIcon: {
     marginLeft: '30px'
