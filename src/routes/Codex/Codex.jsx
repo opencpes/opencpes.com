@@ -1,6 +1,6 @@
 // react & router
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // Detection
 import { isMobile, isSafari } from 'react-device-detect';
@@ -21,9 +21,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Hidden from '@material-ui/core/Hidden';
 
 // Components
-
-// TODO: active state on menu buttons
-// TODO: mobile dropdown for menu
 
 /********************************************************************************
  * Some Styling
@@ -65,12 +62,11 @@ const useStyles = makeStyles(theme => ({
   },
   mobileMenuIcon: {
     marginLeft: '30px'
+  },
+  active: {
+    textDecoration: 'underline'
   }
 }));
-
-const AdapterLink = React.forwardRef((props, ref) => (
-  <Link innerRef={ref} {...props} />
-));
 
 const Codex = props => {
   const classes = useStyles();
@@ -87,7 +83,10 @@ const Codex = props => {
   function handleClose() {
     setAnchorEl(null);
   }
-  console.log(props);
+
+  const AdapterLink = React.forwardRef((props, ref) => (
+    <NavLink activeClassName={classes.active} innerRef={ref} {...props} />
+  ));
 
   useEffect(() => {
     let codexArray = props.pagesJSON.filter(function(page) {
@@ -129,7 +128,7 @@ const Codex = props => {
               >
                 {codexJSON ? (
                   codexJSON.map(a => (
-                    <MenuItem key={a.id} component={Link} to={a.slug}>
+                    <MenuItem key={a.id} component={NavLink} to={a.slug}>
                       {a.title}
                     </MenuItem>
                   ))
