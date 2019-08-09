@@ -1,9 +1,6 @@
 // react & router
 import React, { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-
-// Detection
-import { isMobile, isSafari } from 'react-device-detect';
+import { NavLink, Link } from 'react-router-dom';
 
 // react-markdown
 import ReactMarkdown from 'react-markdown/with-html';
@@ -128,7 +125,7 @@ const Codex = props => {
               >
                 {codexJSON ? (
                   codexJSON.map(a => (
-                    <MenuItem key={a.id} component={NavLink} to={a.slug}>
+                    <MenuItem key={a.id} component={Link} to={a.slug}>
                       {a.title}
                     </MenuItem>
                   ))
