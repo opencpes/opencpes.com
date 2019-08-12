@@ -140,6 +140,13 @@ const Footer = props => {
                 >
                   Source Code
                 </Link>
+                <br />
+                <Link
+                  to="/codex/contact"
+                  className={classes.footerBodyMenuLink}
+                >
+                  Contact
+                </Link>
               </Typography>
             </Grid>
             <Grid item xs={false} sm={false} md={4} />

@@ -1,6 +1,6 @@
 # About OpenCPEs
 
-OpenCPEs is a special Blockchain project we are spinning out from Cloud Security Alliance, one of several Blockchain offerings we will be delivering to the cybersecurity industry. Inspired by the cryptocurrency model, OpenCPEs promises to revolutionize how security professionals measure their professional development experiences.
+OpenCPEs is a special blockchain project we are spinning out from Cloud Security Alliance and is one of several Blockchain offerings we will be delivering to the cybersecurity industry. Inspired by the cryptocurrency model, OpenCPEs promises to revolutionize how security professionals measure their professional development experiences.
 
 It is undeniable that an explosion of pervasive computing is enveloping humanity in both a centralized and distributed fashion. From Cloud Computing to Internet of Things, enabled by Artificial Intelligence, Big Data and 5G, we face existential threats to our security and privacy. While the challenges are real, we believe that the path to assuring privacy and obtaining a high level of digital security lies at the intersection of Cloud and Blockchain.
 
