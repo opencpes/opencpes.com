@@ -2,7 +2,7 @@
 
 ## Business and Technological Inquiries
 
-If you are interested in a technology preview or learning about partnering with OpenCPEs, contact us via email at: [contact@opencpes.com](contact@opencpes.com). Please include "OpenCPEs" at the beginning of the subject line to help us prioritize a reply.
+If you are interested in a technology preview or learning about partnering with OpenCPEs, contact us via email at [contact@opencpes.com](contact@opencpes.com). Please include "OpenCPEs" at the beginning of the subject line to help us prioritize a reply.
 
 ## Google Groups Mailing Lists
 
