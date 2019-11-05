@@ -80,7 +80,7 @@ This system is designed to allow security professionals to make specific claims 
 
 ## How can I start using OpenCPEs?
 
-We are diligently working to make the OpenCPEs technology available. Our blockchain, called Open Cybersecurity Ledgers (OCL) is operational and our client software centsiWallet and API libraries will be released soon.
+We are diligently working to make the OpenCPEs technology available. Our blockchain technology, called Open Cybersecurity Ledgers (OCL) is operational and our client software centsiWallet and API libraries will be released soon.
 
 To receive general announcements about the OpenCPEs platform, please join the announcements group by sending an email to announcements+subscribe@opencpes.com
 
