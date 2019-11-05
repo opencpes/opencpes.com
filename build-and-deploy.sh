@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#
+# In general you'll be editing the files in ./public/md/codex/
+#
 # The configuration files for this are stored in ~/.csalabs-opencpes.com/config
 #
 # 1) You will need to use either your default SSH key or specify one in the
