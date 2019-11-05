@@ -19,10 +19,6 @@ To achieve privacy and security, we needed:
 
 A blockchain is an ideal solution to meet requirements 1, 2, 3 and 4, and with creative use of blockchain technologies and hashing technologies we can meet requirement 5 and 6.
 
-## How does mining work?
-
-We don't use a proof of work (PoW) consensus model, instead we use a proof of stake (PoS) consensus system, this is both more efficient (no wasted mining cycles) and reflects the simple fact that OpenCPE records are created by humans engaging in CPE activities and certifications and then recording them in their centsiWallet.
-
 ## What is the deal with the centsi pseudo-crypto currency?
 
 centsi is the unit of measurement of the continuing professional education (CPE) credits that will be stored in an individual’s OpenCPEs centsiWallet. To be clear, centsi is not a cryptocurrency. centsi is a pseudo cryptocurrency whichcan be used to measure value, but unlike a currency, it cannot be spent. Once centsi is entered into a user’s OpenCPEs centsiWallet it cannot leave. The main goal of centsi is to make it easier for users to express the value held in their OpenCPEs centsiWallet.

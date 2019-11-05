@@ -15,10 +15,6 @@ To achieve the privacy and security properties in we needed:
 
 A blockchain is an ideal solution to meet requirements 1, 2, 3 and 4 and with creative use of blockchain technologies and hashing technologies we can meet requirement 5 and 6.
 
-## How does mining work?
-
-We don't use a proof of work (PoW) consensus model, instead we use a proof of stake (PoS) consensus system, this is both more efficient (no wasted mining cycles) and reflects the simple fact that OpenCPE records are created by humans engaging in CPE activities and certifications and then recording them in their centsiWallet. 
-
 ## Blockchain records are immutable, how do you deal with incorrect/obsolete data?
 
 Blockchain records are immutable (it’s a core feature). But that doesn’t mean we can’t add updated data and link to the original data. A simple analogy would be banking records: transactions are recorded, and can be reversed if needed by simply creating a new transaction (e.g. a refund from a merchant). Banks do not simply delete transactions that are incorrect (your ledger needs to be correct and complete). From these transaction records your total balance can be calculated.
