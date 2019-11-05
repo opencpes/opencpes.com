@@ -28,20 +28,13 @@
 git pull
 
 # remove the precache manifest since it gets blown away anyways
-git rm -rf build/precache-manifest.[0-9a-f]*.js
-git commit -m "removed precache-manifest" 
-git push
+#git rm -rf build/precache-manifest.[0-9a-f]*.js
+#git commit -m "removed precache-manifest" 
+#git push
 
 # STAGE 2
-# Startup a Docker container with nodejs and manually cal it to use the build-script.sh
-#
-# OPTIONAL CONTAINER BUILD/UPDATE STEP: first time you'll need to build the container, 
-# or if we update the build script:
-# cd ./build-and-deploy/docker-node-build/
-# docker build . -t opencpes-build -f Dockerfile
-
-CURRENT_DIR=`pwd`
-docker run -v $CURRENT_DIR:/opencpes.com -it  opencpes-build  /build-script.sh
+cd opencpes.com
+npm run build
 
 # now that the build is done let's push the new files into git
 git add -A build/*
@@ -53,15 +46,6 @@ git push
 # long term: we create a new S3 bucket and update the Cloudflare DNS to point at it, 
 # and create a new Cloudflare entry for the previous bucket, this allows us to easily roll
 # back if the website gets broken (short term: we roll git back and rebuild)
-
-# OPTIONAL CONTAINER BUILD/UPDATE STEP: first time you'll need to build the container,
-# or if we update the build script:
-# cd ./build-and-deploy/docker-s3-synch/
-# docker build . -t opencpes-s3-synch -f Dockerfile
-
-#CURRENT_DIR=`pwd`
-#docker run -v $CURRENT_DIR:/opencpes.com -it  opencpes-s3-synch  /build-script.sh
-
 
 # STAGE 4
 # we run the website through WebsiteWatcher (WSW) running in AWS workspace, this is
