@@ -1,4 +1,4 @@
-# OpenCPEs and centsi FAQ
+# OpenCPEs and centsay FAQ
 
 ## What is OpenCPEs?
 
@@ -23,31 +23,31 @@ A blockchain is an ideal solution to meet requirements 1, 2, 3 and 4, and with c
 
 OpenCPEs uses a proof of stake (PoS) consensus model, as such there is no "mining" activity in the classical sense, this is both efficient and reduces the time and effort required to create blockchain records.
 
-## What is the deal with the centsi pseudo-crypto currency?
+## What is the deal with the centsay pseudo-crypto currency?
 
-centsi is the unit of measurement of the continuing professional education (CPE) credits that will be stored in an individual’s OpenCPEs centsiWallet. To be clear, centsi is not a cryptocurrency. centsi is a pseudo cryptocurrency whichcan be used to measure value, but unlike a currency, it cannot be spent. Once centsi is entered into a user’s OpenCPEs centsiWallet it cannot leave. The main goal of centsi is to make it easier for users to express the value held in their OpenCPEs centsiWallet.
+centsay is the unit of measurement of the continuing professional education (CPE) credits that will be stored in an individual’s OpenCPEs centsayWallet. To be clear, centsay is not a cryptocurrency. centsay is a pseudo cryptocurrency whichcan be used to measure value, but unlike a currency, it cannot be spent. Once centsay is entered into a user’s OpenCPEs centsayWallet it cannot leave. The main goal of centsay is to make it easier for users to express the value held in their OpenCPEs centsayWallet.
 
-## How will OpenCPEs and centsi be used by cybersecurity professionals in the real world?
+## How will OpenCPEs and centsay be used by cybersecurity professionals in the real world?
 
-We have several examples of how centsi will be used
+We have several examples of how centsay will be used
 
-- A professional can attend a security conference and take a picture of a custom QR code to generate centsi credits.
-- Security associations and standards bodies can use this to award centsi credits to professionals that attend chapter meetings, participate in research working groups, speak at conferences and many other related activities.
-- Professional accreditation organizations can accept centsi credits to satisfy their traditional CPE requirements.
-- A software company can award a security researcher centsi credits for discovering a vulnerability in their code.
-- Content publishers from security magazines to online universities can award centsi credits for reading/writing articles, taking online courses, watching webinars and answering quizzes, etc.
+- A professional can attend a security conference and take a picture of a custom QR code to generate centsay credits.
+- Security associations and standards bodies can use this to award centsay credits to professionals that attend chapter meetings, participate in research working groups, speak at conferences and many other related activities.
+- Professional accreditation organizations can accept centsay credits to satisfy their traditional CPE requirements.
+- A software company can award a security researcher centsay credits for discovering a vulnerability in their code.
+- Content publishers from security magazines to online universities can award centsay credits for reading/writing articles, taking online courses, watching webinars and answering quizzes, etc.
 
 There are many other examples we can cite, and you may have some ideas of your own. Professionals can easily get credit for experience and be rewarded for real accomplishments. This allows all of us to better measure competency in security professionals.
 
-## How will OpenCPEs and centsi help me address existing annual CPE requirements I have with the security certifications I hold?
+## How will OpenCPEs and centsay help me address existing annual CPE requirements I have with the security certifications I hold?
 
-In the long run, any organization that issues security certifications or other related credentialing will be able to validate and accept centsi credits you make available from your OpenCPEs centsiWallet by using our tools. The reverse is true as well, and these organizations will be able to grant you centsi by achieving a certification. In the interim, the OpenCPEs centsiWallet will produce documentation for your credits that you can send to the accrediting organization via other means such as email.
+In the long run, any organization that issues security certifications or other related credentialing will be able to validate and accept centsay credits you make available from your OpenCPEs centsayWallet by using our tools. The reverse is true as well, and these organizations will be able to grant you centsay by achieving a certification. In the interim, the OpenCPEs centsayWallet will produce documentation for your credits that you can send to the accrediting organization via other means such as email.
 
 We feel that organizations granting you certifications today will be eager to plug into OpenCPEs to assist qualified professionals in maintaining their certifications. The reality is, if you are not being given credit for your achievements within cybersecurity, you are being cheated out of the credentials you have earned, and ultimately, the career you deserve.
 
-## Ok, I get how OpenCPEs and centsi make sense for certifications, how does this benefit other players in the cybersecurity industry?
+## Ok, I get how OpenCPEs and centsay make sense for certifications, how does this benefit other players in the cybersecurity industry?
 
-Conference providers will offer centsi as it makes their conference more valuable and increases attendance. Educational websites will increase their traffic by offering centsi. Employers will have a better understanding of who the really qualified professionals are. There are many other examples.
+Conference providers will offer centsay as it makes their conference more valuable and increases attendance. Educational websites will increase their traffic by offering centsay. Employers will have a better understanding of who the really qualified professionals are. There are many other examples.
 
 ## Blockchain records are immutable, how do you deal with incorrect/obsolete data?
 
@@ -78,13 +78,13 @@ All other cases of data distribution are up to you. For example, if you apply fo
 
 ## Is this a social scoring / rating system?
 
-No. By definition, we only accept data users submit about themselves. The data and the value of the centsi is held in a user-controlled wallet. We cannot disclose what is in a user’s wallet (we don’t have it) and we can’t disclose the evidence (we delete it immediately once we create a validation record).
+No. By definition, we only accept data users submit about themselves. The data and the value of the centsay is held in a user-controlled wallet. We cannot disclose what is in a user’s wallet (we don’t have it) and we can’t disclose the evidence (we delete it immediately once we create a validation record).
 
 This system is designed to allow security professionals to make specific claims about their education, certification, training, professional activities, and so on. The user decides what is submitted.
 
 ## How can I start using OpenCPEs?
 
-We are diligently working to make the OpenCPEs technology available. Our blockchain technology, called Open Cybersecurity Ledgers (OCL) is operational and our client software centsiWallet and API libraries will be released soon.
+We are diligently working to make the OpenCPEs technology available. Our blockchain technology, called Open Cybersecurity Ledgers (OCL) is operational and our client software centsayWallet and API libraries will be released soon.
 
 To receive general announcements about the OpenCPEs platform, please join the announcements group by sending an email to announcements+subscribe@opencpes.com
 
