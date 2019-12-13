@@ -1,23 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.97324d1c.chunk.css",
-    "main.js": "/static/js/main.b64551f6.chunk.js",
-    "main.js.map": "/static/js/main.b64551f6.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "main.css": "/static/css/main.43c93a9b.chunk.css",
+    "main.js": "/static/js/main.9c2ff5f0.chunk.js",
+    "main.js.map": "/static/js/main.9c2ff5f0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.68c89f03.js",
+    "runtime-main.js.map": "/static/js/runtime-main.68c89f03.js.map",
     "static/css/2.8389a775.chunk.css": "/static/css/2.8389a775.chunk.css",
-    "static/js/2.c39aeff4.chunk.js": "/static/js/2.c39aeff4.chunk.js",
-    "static/js/2.c39aeff4.chunk.js.map": "/static/js/2.c39aeff4.chunk.js.map",
+    "static/js/2.48362f31.chunk.js": "/static/js/2.48362f31.chunk.js",
+    "static/js/2.48362f31.chunk.js.map": "/static/js/2.48362f31.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.28185de4a9f866802b21903bac6624f6.js": "/precache-manifest.28185de4a9f866802b21903bac6624f6.js",
+    "precache-manifest.61b46e9a9e731a003d3d00df7b7c4cbe.js": "/precache-manifest.61b46e9a9e731a003d3d00df7b7c4cbe.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.8389a775.chunk.css.map": "/static/css/2.8389a775.chunk.css.map",
-    "static/css/main.97324d1c.chunk.css.map": "/static/css/main.97324d1c.chunk.css.map",
+    "static/css/main.43c93a9b.chunk.css.map": "/static/css/main.43c93a9b.chunk.css.map",
+    "static/js/2.48362f31.chunk.js.LICENSE": "/static/js/2.48362f31.chunk.js.LICENSE",
     "static/media/d1.png": "/static/media/d1.b05743dc.png",
     "static/media/d2.png": "/static/media/d2.a0eb1e5d.png",
     "static/media/d3.png": "/static/media/d3.ca9c7b25.png",
     "static/media/heroecpes.png": "/static/media/heroecpes.c3f68aef.png",
     "static/media/openCPEs_logo_22.d68c06f9.svg": "/static/media/openCPEs_logo_22.d68c06f9.svg",
     "static/media/index.css": "/static/media/roboto-latin-900italic.bc833e72.woff"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68c89f03.js",
+    "static/css/2.8389a775.chunk.css",
+    "static/js/2.48362f31.chunk.js",
+    "static/css/main.43c93a9b.chunk.css",
+    "static/js/main.9c2ff5f0.chunk.js"
+  ]
 }
