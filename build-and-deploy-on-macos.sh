@@ -37,6 +37,14 @@ git pull
 #git push
 
 # STAGE 2
+#
+# brew install node
+# npm install react-scripts   
+# npm install react-dom
+# npm install react
+#
+#
+#
 #cd opencpes.com
 npm run build
 
