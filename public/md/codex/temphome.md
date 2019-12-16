@@ -6,7 +6,7 @@ OpenCPEs is a new Blockchain based project from [CloudSecurityAlliance](https://
 - [Validating OpenCPEs](https://opencpes.com/validating-opencpes)
 - [CPE Providers](https://opencpes.com/cpe-providers)
 - [Certification Providers](https://opencpes.com/certification-providers)
-- [OpenCPEs and ¢entsi FAQ](https://opencpes.com/faq)
+- [OpenCPEs and ¢entsay FAQ](https://opencpes.com/faq)
 - [Source Code](https://opencpes.com/codex/source-code)
 - [CyberCV Wallet](https://opencpes.com/codex/cybercv-wallet-details)
 

@@ -73,14 +73,14 @@ const Details = props => {
                 <img src={d3} alt="Something" className={classes.dimg} />
                 <div className={classes.detailsWrap}>
                   <Typography variant="h2" className={classes.title}>
-                    What is ¢entsi
+                    What is ¢entsay
                   </Typography>
                   <Typography variant="body1" className={classes.text}>
-                    ¢entsi is not a cryptocurrency. ¢entsi is a pseudo
+                    ¢entsay is not a cryptocurrency. ¢entsay is a pseudo
                     cryptocurrency which can be used to measure value, but
-                    unlike a currency, it cannot be spent. Once ¢entsi is
+                    unlike a currency, it cannot be spent. Once ¢entsay is
                     entered into a user's wallet, it cannot leave. The main goal
-                    of ¢entsi is to make it easier for users to express the
+                    of ¢entsay is to make it easier for users to express the
                     value of their CPE history.
                   </Typography>
                 </div>

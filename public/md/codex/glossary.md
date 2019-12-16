@@ -1,6 +1,6 @@
 # Glossary:
 
-**centsay** – centsay (also displayed as “¢entsi”) is a pseudo crypto-currency that can be used to measure the value of any registered claim, including continuing professional education (CPE) claims, it generally maps at 1 centsay per hour of CPE. centsay can also be used to measure the relative value of certifications and other professional achievements.
+**centsay** – centsay (also displayed as “¢entsay”) is a pseudo crypto-currency that can be used to measure the value of any registered claim, including continuing professional education (CPE) claims, it generally maps at 1 centsay per hour of CPE. centsay can also be used to measure the relative value of certifications and other professional achievements.
 
 **Certification** - A certification can be attached to a person and is provided by a third party. Although OpenCPEs supports self-certification claims (e.g. “I claim I can do X”), it is generally accepted that certifications are defined by third parties (e.g. a certification body).
 

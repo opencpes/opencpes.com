@@ -64,20 +64,20 @@ const Preview = props => {
             >
               <Grid item xs={12} sm={9} md={5}>
                 <Typography variant="h2" className={classes.title}>
-                  centsiWallet Technology Preview
+                  centsayWallet Technology Preview
                 </Typography>
                 <Typography className={classes.text}>
-                  Watch as centsi are created using the OpenCPEs centsiWallet,
+                  Watch as centsay are created using the OpenCPEs centsayWallet,
                   currently in technical beta for Apple iOS devices.
                 </Typography>
                 <Typography className={classes.text}>
-                  If you want to be informed when the OpenCPEs centsiWallet
+                  If you want to be informed when the OpenCPEs centsayWallet
                   becomes generally available please signup to our announcement
                   list at:{' '}
                   <a href="mailto:announcements+subscribe@opencpes.com">
                     announcements+subscribe@opencpes.com
                   </a>{' '}
-                  (a low volume announcement list for centsiWallet
+                  (a low volume announcement list for centsayWallet
                   announcements).
                 </Typography>
               </Grid>

@@ -38,7 +38,7 @@ export const pagesJSON = [
     slug: '/codex/faq',
     md: process.env.REACT_APP_MD_SRC + 'codex/faq.md',
     render: Codex,
-    title: 'OpenCPEs and centsi FAQ',
+    title: 'OpenCPEs and centsay FAQ',
     desc:
       'OpenCPEs is a special Blockchain project we are spinning out from Cloud Security Alliance, one of several Blockchain offerings we will be delivering to the cybersecurity industry....',
     tech: false,
@@ -113,11 +113,11 @@ export const pagesJSON = [
     id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
     slug: '/codex/wallet',
-    md: process.env.REACT_APP_MD_SRC + 'codex/centsi-wallet.md',
+    md: process.env.REACT_APP_MD_SRC + 'codex/centsay-wallet.md',
     render: Codex,
-    title: 'OpenCPEs centsiWallet Details',
+    title: 'OpenCPEs centsayWallet Details',
     desc:
-      'The OpenCPEs centsiWallet is a mobile client currently available for Apple iOS in beta and in development for Google Android. If you want to be informed when it becomes available, please sign up to our ¢entsi announcement list.',
+      'The OpenCPEs centsayWallet is a mobile client currently available for Apple iOS in beta and in development for Google Android. If you want to be informed when it becomes available, please sign up to our ¢entsay announcement list.',
     tech: true,
     codex: true
   },
@@ -129,7 +129,7 @@ export const pagesJSON = [
     render: Codex,
     title: 'How we Protect Client Privacy',
     desc:
-      'Protecting client data is critical. We do not directly store client data. Instead, we only store a hashed value of the client-provided - data after combining, it was a large (2^1024) random nonce. After this hashed value is created, we immediately destroy the client data that was submitted to us. We also have a secure client, the OpenCPEs centsiWallet, in technical beta that takes additional steps to protect client data.',
+      'Protecting client data is critical. We do not directly store client data. Instead, we only store a hashed value of the client-provided - data after combining, it was a large (2^1024) random nonce. After this hashed value is created, we immediately destroy the client data that was submitted to us. We also have a secure client, the OpenCPEs centsayWallet, in technical beta that takes additional steps to protect client data.',
     tech: true,
     codex: true
   },
@@ -172,12 +172,12 @@ export const pagesJSON = [
   {
     id: Date.now() * Math.floor(Math.random() * 1000 + 1),
     type: 'codex',
-    slug: '/codex/faq-centsi',
-    md: process.env.REACT_APP_MD_SRC + 'codex/centsi.md',
+    slug: '/codex/faq-centsay',
+    md: process.env.REACT_APP_MD_SRC + 'codex/centsay.md',
     render: Codex,
-    title: 'FAQ - centsi',
+    title: 'FAQ - centsay',
     desc:
-      'Centsi is the unit of measurement of the Continuing Professional Education (CPE) credits that will be stored in an individual’s OpenCPEs centsiWallet.',
+      'Centsay is the unit of measurement of the Continuing Professional Education (CPE) credits that will be stored in an individual’s OpenCPEs centsayWallet.',
     tech: true,
     codex: false
   },

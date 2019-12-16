@@ -2,9 +2,9 @@
 
 There are two ways to get involved with OpenCPEs as a user:
 
-1. Use the OpenCPEs Wallet to submit the QR code claim and activate your ¢entsi immediately
+1. Use the OpenCPEs Wallet to submit the QR code claim and activate your ¢entsay immediately
 
-2. Use the email gateway ([centsay@opencpes.com](mailto:centsay@opencpes.com)) to register your QR code claim, you will be able to later activate your ¢entsi using the OpenCPEs Wallet
+2. Use the email gateway ([centsay@opencpes.com](mailto:centsay@opencpes.com)) to register your QR code claim, you will be able to later activate your ¢entsay using the OpenCPEs Wallet
 
 The OpenCPEs Wallet (a mobile client for Apple iOS and Google Android) is currently under development, if you want to be informed of if when it is available please signup to our [CyberCV Wallet Google Group](https://groups.google.com/a/announcements.opencpes.com/d/forum/cybercv-wallet) (a low volume announcement list for OpenCPEs Wallet announcements).
 

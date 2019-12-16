@@ -13,7 +13,7 @@ import Button from '@material-ui/core/Button';
 // components
 
 // Assets
-//import { ReactComponent as CentsiMark } from '../../assets/img/centsi.svg';
+//import { ReactComponent as CentsayMark } from '../../assets/img/centsay.svg';
 import { ReactComponent as OpenCPEsMark } from '../../assets/img/openCPEs_logo_22.svg';
 
 /********************************************************************************
@@ -69,7 +69,7 @@ const useStyles = makeStyles(theme => ({
       textDecoration: 'underline'
     }
   },
-  centsiMark: {
+  centsayMark: {
     height: '30px',
     width: '30px',
     marginRight: '10px',

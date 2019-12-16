@@ -62,7 +62,7 @@ const StayConnected = props => {
                   Groups allowing you to join us in the OpenCPEs revolution.
                   </Typography>*/}
                 <Typography variant="body1" className={classes.text}>
-                  The OpenCPEs centsiWallet is a mobile client, currently
+                  The OpenCPEs centsayWallet is a mobile client, currently
                   available for Apple iOS in technical beta and in development
                   for Google Android. If you want to be informed when it becomes
                   generally available, please sign up to our announcement list
@@ -70,7 +70,7 @@ const StayConnected = props => {
                   <a href="mailto:announcements+subscribe@opencpes.com">
                     announcements+subscribe@opencpes.com
                   </a>{' '}
-                  (a low volume list for centsiWallet announcements).
+                  (a low volume list for centsayWallet announcements).
                 </Typography>
                 {/*<Typography variant="body1" className={classes.text}>
                   To get <b>technical notifications</b> about the OpenCPEs

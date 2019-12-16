@@ -1,6 +1,6 @@
 # OpenCPEs centsayWallet Details
 
-The OpenCPEs centsayWallet is a mobile client currently available for Apple iOS in beta and in development for Google Android. If you want to be informed when it becomes available, please sign up to our [¢entsi announcement list](https://groups.google.com/a/announcements.opencpes.com/d/forum/cybercv-wallet).
+The OpenCPEs centsayWallet is a mobile client currently available for Apple iOS in beta and in development for Google Android. If you want to be informed when it becomes available, please sign up to our [¢entsay announcement list](https://groups.google.com/a/announcements.opencpes.com/d/forum/cybercv-wallet).
 
 Watch as centsay are created using the OpenCPEs centsayWallet:
 

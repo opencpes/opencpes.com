@@ -124,7 +124,7 @@ const Tech = props => {
                     Technology
                   </Typography>
                   <Typography variant="h2" className={classes.title}>
-                    Documents &amp; Articles about OpenCPEs and Centsi
+                    Documents &amp; Articles about OpenCPEs and Centsay
                   </Typography>
                   <Typography variant="body1" className={classes.text}>
                     The OpenCPEs platform is rapidly evolving, and we're

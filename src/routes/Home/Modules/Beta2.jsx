@@ -61,10 +61,10 @@ const Beta2 = props => {
             >
               <Grid item xs={12} sm={9} md={5}>
                 <Typography variant="h2" className={classes.title}>
-                  Watch this Video and Create ¢entsi
+                  Watch this Video and Create ¢entsay
                 </Typography>
                 <Typography className={classes.text}>
-                  Create your first ¢entsi by watching the video below to learn
+                  Create your first ¢entsay by watching the video below to learn
                   about getting started with the OpenCPEs mobile client.
                   Instructions for submitting your self-claims are included in
                   the video and detailed in the next section.
